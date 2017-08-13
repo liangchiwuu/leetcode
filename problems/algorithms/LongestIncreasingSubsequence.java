@@ -26,7 +26,6 @@ public class LongestIncreasingSubsequence {
      * Time complexity: O(n^2)
      */
     public int lengthOfLIS(int[] nums) {
-
         if (nums.length == 0) {
             return 0;
         }
@@ -50,7 +49,6 @@ public class LongestIncreasingSubsequence {
         }
 
         return maxLength;
-
     }
 
     /**
@@ -59,9 +57,7 @@ public class LongestIncreasingSubsequence {
      * Time complexity: O(n log n)
      */
     public int lengthOfLIS2(int[] nums) {
-
         return 0;
-
     }
 
 }

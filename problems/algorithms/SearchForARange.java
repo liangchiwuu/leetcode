@@ -16,7 +16,6 @@ import java.util.Arrays;
 public class SearchForARange {
 
     public static void main(String[] args) {
-
         int[] nums = { 5, 7, 7, 8, 8, 10 };
         int target = 8;
 
@@ -30,7 +29,6 @@ public class SearchForARange {
      * Time complexity: O(log n)
      */
     public int[] searchRange(int[] nums, int target) {
-
         if (nums.length == 0) {
             return new int[] { -1, -1 };
         }

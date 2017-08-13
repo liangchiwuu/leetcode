@@ -35,7 +35,6 @@ public class ImplementStrStr {
         String needle = "cd";
         int result = new ImplementStrStr().strStr(haystack, needle);
         System.out.println(result);
-
     }
 
     /**
