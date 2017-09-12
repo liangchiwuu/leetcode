@@ -14,5 +14,6 @@ LeetCode solutions in Java :D!
 |136|Easy|[Single Number](https://leetcode.com/problems/single-number/)|[Java](./problems/algorithms/SingleNumber.java)|
 |137|Medium|[Single Number II](https://leetcode.com/problems/single-number-ii/)|[Java](./problems/algorithms/SingleNumberII.java)|
 |260|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./problems/algorithms/SingleNumberIII.java)|
+|278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./problems/algorithms/FirstBadVersion.java)|
 |300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./problems/algorithms/LongestIncreasingSubsequence.java)|
 |344|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/)|[Java](./problems/algorithms/ReverseString.java)|

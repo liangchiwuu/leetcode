@@ -24,7 +24,7 @@ public class SearchInsertPosition {
     /**
      * A standard binary search.
      * 
-     * Time complexity:O(log n)
+     * Time complexity: O(log n)
      * Space complexity: O(1)
      */
     public int searchInsert(int[] nums, int target) {
