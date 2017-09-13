@@ -13,6 +13,8 @@ LeetCode solutions in Java :D!
 |35|Easy|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[Java](./problems/algorithms/SearchInsertPosition.java)|
 |136|Easy|[Single Number](https://leetcode.com/problems/single-number/)|[Java](./problems/algorithms/SingleNumber.java)|
 |137|Medium|[Single Number II](https://leetcode.com/problems/single-number-ii/)|[Java](./problems/algorithms/SingleNumberII.java)|
+|153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./problems/algorithms/FindMinimumInRotatedSortedArray.java)|
+|154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./problems/algorithms/FindMinimumInRotatedSortedArrayII.java)|
 |162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./problems/algorithms/FindPeakElement.java)|
 |260|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./problems/algorithms/SingleNumberIII.java)|
 |278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./problems/algorithms/FirstBadVersion.java)|
