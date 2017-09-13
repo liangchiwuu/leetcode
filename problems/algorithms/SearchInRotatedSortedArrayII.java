@@ -1,7 +1,7 @@
 package algorithms;
 
 /**
- * This is a follow up for "Find Minimum in Rotated Sorted Array":
+ * This is a follow up for "Search in Rotated Sorted Array":if
  * What if duplicates are allowed?
  * Would this affect the run-time complexity? How and why?
  * 
@@ -9,15 +9,16 @@ package algorithms;
  * 
  * (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
  * 
- * Find the minimum element.
+ * Write a function to determine if a given target is in the array.
  * 
  * The array may contain duplicates.
  */
-public class FindMinimumInRotatedSortedArrayII {
+public class SearchInRotatedSortedArrayII {
 
     public static void main(String[] args) {
-        int[] nums = new int[] { 4, 4, 4, 0, 1, 2, 4 };
-        int result = new FindMinimumInRotatedSortedArrayII().findMin(nums);
+        int[] nums = new int[] { 6, 8, 9, 1, 3, 5 };
+        int target = 2;
+        boolean result = new SearchInRotatedSortedArrayII().search(nums, target);
         System.out.println(result);
     }
 
@@ -28,18 +29,18 @@ public class FindMinimumInRotatedSortedArrayII {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int findMin(int[] nums) {
+    public boolean search(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
-            return -1;
+            return false;
         }
 
-        int min = nums[0];
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] < min) {
-                min = nums[i];
+        for (int e : nums) {
+            if (e == target) {
+                return true;
             }
         }
-        return min;
+
+        return false;
     }
 
     /**
@@ -49,9 +50,9 @@ public class FindMinimumInRotatedSortedArrayII {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int findMin2(int[] nums) {
+    public boolean search2(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
-            return -1;
+            return false;
         }
 
         int start = 0;
@@ -59,20 +60,31 @@ public class FindMinimumInRotatedSortedArrayII {
 
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
-            if (nums[mid] == nums[end]) {
-                // if mid equals to end, it's fine to remove end without impact the smallest element
-                end--;
-            } else if (nums[mid] < nums[end]) {
-                end = mid;
-            } else {
-                start = mid;
+            if (nums[mid] == target) {
+                return true;
             }
+            if (nums[mid] < nums[end]) {
+                if (nums[mid] <= target && target <= nums[end]) {
+                    start = mid;
+                } else {
+                    end = mid;
+                }
+            } else if (nums[mid] > nums[end]) {
+                if (nums[start] <= target && target <= nums[mid]) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            } else {
+                end--;
+            }
+
         }
 
-        if (nums[start] < nums[end]) {
-            return nums[start];
+        if (nums[start] == target || nums[end] == target) {
+            return true;
         } else {
-            return nums[end];
+            return false;
         }
     }
 

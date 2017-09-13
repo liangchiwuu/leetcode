@@ -9,8 +9,10 @@ LeetCode solutions in Java :D!
 |1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./problems/algorithms/TwoSum.java)|
 |2|Medium|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](./problems/algorithms/AddTwoNumbers.java)|
 |28|Easy|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[Java](./problems/algorithms/ImplementStrStr.java)|
+|33|Medium|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[Java](./problems/algorithms/SearchInRotatedSortedArray.java)|
 |34|Medium|[Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[Java](./problems/algorithms/SearchForARange.java)|
 |35|Easy|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[Java](./problems/algorithms/SearchInsertPosition.java)|
+|81|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./problems/algorithms/SearchInRotatedSortedArrayII.java)|
 |136|Easy|[Single Number](https://leetcode.com/problems/single-number/)|[Java](./problems/algorithms/SingleNumber.java)|
 |137|Medium|[Single Number II](https://leetcode.com/problems/single-number-ii/)|[Java](./problems/algorithms/SingleNumberII.java)|
 |153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./problems/algorithms/FindMinimumInRotatedSortedArray.java)|
