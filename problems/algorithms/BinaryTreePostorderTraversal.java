@@ -163,4 +163,41 @@ public class BinaryTreePostorderTraversal {
         return result;
     }
 
+    /**
+     * Another non-recursive solution use stack.
+     * 
+     * https://en.wikipedia.org/wiki/Tree_traversal
+     * 
+     * Time complexity: O(n)
+     */
+    public List<Integer> postorderTraversal5(TreeNode root) {
+        List<Integer> result = new LinkedList<Integer>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        // previously traversed node
+        TreeNode prev = null;
+        TreeNode curr = root;
+
+        if (root == null) {
+            return result;
+        }
+
+        while (!stack.empty() || curr != null) {
+            // find the bottom left node
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+
+            TreeNode peek = stack.peek();
+            // if right child exists and traversing node from left child, then move right
+            if (peek.right != null && (prev == null || prev.val != peek.right.val)) {
+                curr = peek.right;
+            } else {
+                result.add(peek.val);
+                prev = stack.pop();
+            }
+        }
+
+        return result;
+    }
 }
