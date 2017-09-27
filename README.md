@@ -18,6 +18,7 @@ LeetCode solutions in Java ☺!
 |74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./problems/algorithms/SearchA2DMatrix.java)|Binary Search|
 |81 ★|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./problems/algorithms/SearchInRotatedSortedArrayII.java)|Binary Search|
 |94 ★|Medium|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[Java](./problems/algorithms/BinaryTreeInorderTraversal.java)|Binary Tree, Divide and Conquer|
+|104|Easy|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|[Java](./problems/algorithms/MaximumDepthOfBinaryTree.java)|Binary Tree, Divide and Conquer|
 |136|Easy|[Single Number](https://leetcode.com/problems/single-number/)|[Java](./problems/algorithms/SingleNumber.java)|Bit Manipulation|
 |137 ★|Medium|[Single Number II](https://leetcode.com/problems/single-number-ii/)|[Java](./problems/algorithms/SingleNumberII.java)|Bit Manipulation|
 |144|Medium|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[Java](./problems/algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer|
@@ -25,6 +26,7 @@ LeetCode solutions in Java ☺!
 |153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./problems/algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|
 |154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./problems/algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|
 |162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./problems/algorithms/FindPeakElement.java)|Binary Search|
+|257|Easy|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[Java](./problems/algorithms/BinaryTreePaths.java)|Binary Tree, Divide and Conquer|
 |260 ★|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./problems/algorithms/SingleNumberIII.java)|Bit Manipulation|
 |278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./problems/algorithms/FirstBadVersion.java)|Binary Search|
 |300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./problems/algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
