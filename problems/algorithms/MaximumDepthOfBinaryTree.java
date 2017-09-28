@@ -52,14 +52,14 @@ public class MaximumDepthOfBinaryTree {
      * 
      * Time complexity: O(n)
      */
-    private int maxDepth;
-
     public int maxDepth2(TreeNode root) {
         maxDepth = 0;
         helper(root, 1);
 
         return maxDepth;
     }
+
+    private int maxDepth;
 
     private void helper(TreeNode node, int currentDepth) {
         if (node == null) {
