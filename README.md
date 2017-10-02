@@ -29,6 +29,8 @@ LeetCode solutions in Java ☺!
 |153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./problems/algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|
 |154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./problems/algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|
 |162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./problems/algorithms/FindPeakElement.java)|Binary Search|
+|235|Easy|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|[Java](./problems/algorithms/LowestCommonAncestorOfABinarySearchTree.java)|Binary Tree|
+|236 ★|Medium|[Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[Java](./problems/algorithms/LowestCommonAncestorOfABinaryTree.java)|Binary Tree, Divide and Conquer|
 |257|Easy|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[Java](./problems/algorithms/BinaryTreePaths.java)|Binary Tree, Divide and Conquer|
 |260 ★|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./problems/algorithms/SingleNumberIII.java)|Bit Manipulation|
 |278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./problems/algorithms/FirstBadVersion.java)|Binary Search|
