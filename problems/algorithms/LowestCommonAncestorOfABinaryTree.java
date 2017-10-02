@@ -99,4 +99,58 @@ public class LowestCommonAncestorOfABinaryTree {
         return null;
     }
 
+    /**
+     * This solution considers one more constrain: "return null if LCA does not exist." In order to ensure that LCA does
+     * exist, both q/p must present in the tree. Here we use a custom class to carry whether q/p exists or not.
+     * 
+     * Time complexity: O(n)
+     */
+    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        Result result = helper(root, p, q);
+        if (result.pExist && result.qExist) {
+            return result.node;
+        } else {
+            return null;
+        }
+    }
+
+    class Result {
+        boolean pExist;
+        boolean qExist;
+        TreeNode node;
+
+        Result(boolean pExist, boolean qExist, TreeNode node) {
+            this.pExist = pExist;
+            this.qExist = qExist;
+            this.node = node;
+        }
+    }
+
+    private Result helper(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) {
+            return new Result(false, false, null);
+        }
+
+        Result left = helper(root.left, p, q);
+        Result right = helper(root.right, p, q);
+
+        boolean pExist = left.pExist || right.pExist || root == p;
+        boolean qExist = left.qExist || right.qExist || root == q;
+
+        if (root == p || root == q) {
+            return new Result(pExist, qExist, root);
+        }
+        if (left.node != null && right.node != null) {
+            return new Result(pExist, qExist, root);
+        }
+        if (left.node != null) {
+            return new Result(pExist, qExist, left.node);
+        }
+        if (right.node != null) {
+            return new Result(pExist, qExist, right.node);
+        }
+
+        return new Result(pExist, qExist, null);
+    }
+
 }
