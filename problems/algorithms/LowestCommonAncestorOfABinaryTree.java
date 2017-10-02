@@ -33,6 +33,12 @@ public class LowestCommonAncestorOfABinaryTree {
      * "Tarjan's algorithm."
      */
 
+    /*
+     * This problem will become very easy if the TreeNode class has additional 'parent' attribute. If the parent node is
+     * accessible, we just need to first find the path to the 2 target nodes from root, then find the first different
+     * node in top-down order.
+     */
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(5);
