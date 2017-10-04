@@ -139,8 +139,9 @@ public class NumberOfIslands {
         }
 
         public void sinkLand(char[][] grid, int i, int j) {
-            if (i < 0 || i >= m || j < 0 || j >= n)
+            if (i < 0 || i >= m || j < 0 || j >= n) {
                 return;
+            }
 
             if (grid[i][j] == LAND) {
                 grid[i][j] = WATER;
