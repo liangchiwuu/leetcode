@@ -53,12 +53,12 @@ public class BinaryTreeLevelOrderTraversal {
      */
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
 
         if (root == null) {
             return result;
         }
 
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(null);
         queue.offer(root);
 
@@ -85,12 +85,49 @@ public class BinaryTreeLevelOrderTraversal {
     }
 
     /**
-     * A DFS solution. The idea is, for a N-level tree, perform N times of search (from level 0 to level N-1). Each
-     * search we target a specific level and add all the nodes on that level.
-     * 
+     * Another BFS solution. The difference between this solution and the previous one is that instead of dummy node, we
+     * first get the # of nodes in current level, then process one level at a time.
+     *
      * Time complexity: O(n)
      */
     public List<List<Integer>> levelOrder2(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+
+        if (root == null) {
+            return result;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            List<Integer> level = new ArrayList<Integer>();
+            int numOfNodes = queue.size();
+
+            for (int i = 0; i < numOfNodes; i++) {
+                TreeNode node = queue.poll();
+                level.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+
+            result.add(level);
+        }
+
+        return result;
+    }
+
+    /**
+     * A DFS solution. The idea is, for a N-level tree, perform N times of search (from level 0 to level N-1). Each
+     * search we target a specific level and add all the nodes on that level.
+     * 
+     * Time complexity: O(n log n)
+     */
+    public List<List<Integer>> levelOrder3(TreeNode root) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
 
         if (root == null) {
