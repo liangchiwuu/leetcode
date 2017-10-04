@@ -19,7 +19,7 @@ public class SingleNumberIII {
 
     public static void main(String[] args) {
         int[] nums = { 1, 2, 1, 3, 2, 5 };
-        int[] result = new SingleNumberIII().singleNumber(nums);
+        int[] result = new SingleNumberIII().new Solution().singleNumber(nums);
         System.out.println(Arrays.toString(result));
     }
 
@@ -30,28 +30,30 @@ public class SingleNumberIII {
      * Time complexity: O(n)
      * Space complexity: O(n)
      */
-    public int[] singleNumber(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return null;
-        }
-
-        HashSet<Integer> set = new HashSet<Integer>();
-        for (int e : nums) {
-            if (set.contains(e)) {
-                set.remove(e);
-            } else {
-                set.add(e);
+    class Solution {
+        public int[] singleNumber(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return null;
             }
-        }
 
-        int[] result = new int[set.size()];
-        int i = 0;
-        for (int e : set) {
-            result[i] = e;
-            i++;
-        }
+            HashSet<Integer> set = new HashSet<Integer>();
+            for (int e : nums) {
+                if (set.contains(e)) {
+                    set.remove(e);
+                } else {
+                    set.add(e);
+                }
+            }
 
-        return result;
+            int[] result = new int[set.size()];
+            int i = 0;
+            for (int e : set) {
+                result[i] = e;
+                i++;
+            }
+
+            return result;
+        }
     }
 
     /**
@@ -63,29 +65,31 @@ public class SingleNumberIII {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int[] singleNumber2(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return null;
-        }
-
-        int xor = 0;
-        for (int e : nums) {
-            xor ^= e;
-        }
-
-        // get the last bit of XOR result, e.g. 1010 ==> 0010
-        // https://en.wikipedia.org/wiki/Bit_manipulation
-        int lastBit = xor - (xor & (xor - 1));
-        int r1 = 0, r2 = 0;
-        for (int e : nums) {
-            if ((lastBit & e) == 0) {
-                r1 ^= e;
-            } else {
-                r2 ^= e;
+    class Solution2 {
+        public int[] singleNumber(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return null;
             }
-        }
 
-        return new int[] { r1, r2 };
+            int xor = 0;
+            for (int e : nums) {
+                xor ^= e;
+            }
+
+            // get the last bit of XOR result, e.g. 1010 ==> 0010
+            // https://en.wikipedia.org/wiki/Bit_manipulation
+            int lastBit = xor - (xor & (xor - 1));
+            int r1 = 0, r2 = 0;
+            for (int e : nums) {
+                if ((lastBit & e) == 0) {
+                    r1 ^= e;
+                } else {
+                    r2 ^= e;
+                }
+            }
+
+            return new int[] { r1, r2 };
+        }
     }
 
 }

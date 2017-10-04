@@ -29,7 +29,7 @@ public class ValidateBinarySearchTree {
         root.right.left = new TreeNode(3);
         root.right.right = new TreeNode(5);
 
-        boolean result = new ValidateBinarySearchTree().isValidBST(root);
+        boolean result = new ValidateBinarySearchTree().new Solution().isValidBST(root);
         System.out.println(result);
     }
 
@@ -40,37 +40,39 @@ public class ValidateBinarySearchTree {
      * 
      * Time complexity: O(n)
      */
-    public boolean isValidBST(TreeNode root) {
-        return helper(root).isBst;
-    }
+    class Solution {
+        class Result {
+            boolean isBst;
+            int max;
+            int min;
 
-    class Result {
-        boolean isBst;
-        int max;
-        int min;
-
-        Result(boolean isBst, int max, int min) {
-            this.isBst = isBst;
-            this.max = max;
-            this.min = min;
-        }
-    }
-
-    private Result helper(TreeNode root) {
-        if (root == null) {
-            return new Result(true, Integer.MIN_VALUE, Integer.MAX_VALUE);
+            Result(boolean isBst, int max, int min) {
+                this.isBst = isBst;
+                this.max = max;
+                this.min = min;
+            }
         }
 
-        Result left = helper(root.left);
-        Result right = helper(root.right);
+        public boolean isValidBST(TreeNode root) {
+            return helper(root).isBst;
+        }
 
-        boolean isBst = left.isBst && right.isBst
-                && (root.right == null || right.min > root.val)
-                && (root.left == null || left.max < root.val);
-        int max = Math.max(Math.max(left.max, right.max), root.val);
-        int min = Math.min(Math.min(left.min, right.min), root.val);
+        private Result helper(TreeNode root) {
+            if (root == null) {
+                return new Result(true, Integer.MIN_VALUE, Integer.MAX_VALUE);
+            }
 
-        return new Result(isBst, max, min);
+            Result left = helper(root.left);
+            Result right = helper(root.right);
+
+            boolean isBst = left.isBst && right.isBst
+                    && (root.right == null || right.min > root.val)
+                    && (root.left == null || left.max < root.val);
+            int max = Math.max(Math.max(left.max, right.max), root.val);
+            int min = Math.min(Math.min(left.min, right.min), root.val);
+
+            return new Result(isBst, max, min);
+        }
     }
 
     /**
@@ -78,31 +80,33 @@ public class ValidateBinarySearchTree {
      * 
      * Time complexity: O(n)
      */
-    public boolean isValidBST2(TreeNode root) {
-        if (root == null) {
+    class Solution2 {
+        private int lastVal = Integer.MIN_VALUE;
+        private boolean firstNode = true;
+
+        public boolean isValidBST(TreeNode root) {
+            if (root == null) {
+                return true;
+            }
+
+            if (!isValidBST(root.left)) {
+                return false;
+            }
+
+            if (!firstNode && lastVal >= root.val) {
+                return false;
+            }
+
+            firstNode = false;
+            lastVal = root.val;
+
+            if (!isValidBST(root.right)) {
+                return false;
+            }
+
             return true;
         }
-
-        if (!isValidBST2(root.left)) {
-            return false;
-        }
-
-        if (!firstNode && lastVal >= root.val) {
-            return false;
-        }
-
-        firstNode = false;
-        lastVal = root.val;
-
-        if (!isValidBST2(root.right)) {
-            return false;
-        }
-
-        return true;
     }
-
-    private int lastVal = Integer.MIN_VALUE;
-    private boolean firstNode = true;
 
     /*
      * Another divide and conquer solution. The key here is to use Long instead of Integer in case the initial root.val
@@ -110,20 +114,22 @@ public class ValidateBinarySearchTree {
      * 
      * Time complexity: O(n)
      */
-    public boolean isValidBST3(TreeNode root) {
-        return isBst(root, Long.MIN_VALUE, Long.MAX_VALUE);
-    }
-
-    private boolean isBst(TreeNode root, long min, long max) {
-        if (root == null) {
-            return true;
+    class Solution3 {
+        public boolean isValidBST(TreeNode root) {
+            return isBst(root, Long.MIN_VALUE, Long.MAX_VALUE);
         }
 
-        if (root.val <= min || root.val >= max) {
-            return false;
-        }
+        private boolean isBst(TreeNode root, long min, long max) {
+            if (root == null) {
+                return true;
+            }
 
-        return isBst(root.left, min, Math.min(max, root.val)) &&
-                isBst(root.right, Math.max(min, root.val), max);
+            if (root.val <= min || root.val >= max) {
+                return false;
+            }
+
+            return isBst(root.left, min, Math.min(max, root.val)) &&
+                    isBst(root.right, Math.max(min, root.val), max);
+        }
     }
 }

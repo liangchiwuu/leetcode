@@ -33,71 +33,75 @@ public class ImplementStrStr {
     public static void main(String[] args) {
         String haystack = "abcdefg";
         String needle = "cd";
-        int result = new ImplementStrStr().strStr(haystack, needle);
+        int result = new ImplementStrStr().new Solution().strStr(haystack, needle);
         System.out.println(result);
     }
 
     /**
      * Brute force solution, time complexity: worst case O(m*n)
      */
-    public int strStr(String haystack, String needle) {
-        if (needle == null || haystack == null) {
+    class Solution {
+        public int strStr(String haystack, String needle) {
+            if (needle == null || haystack == null) {
+                return -1;
+            }
+
+            search: for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
+                for (int j = 0; j < needle.length(); j++) {
+                    if (haystack.charAt(i + j) != needle.charAt(j)) {
+                        continue search;
+                    }
+                }
+                return i;
+            }
+
             return -1;
         }
-
-        search: for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
-            for (int j = 0; j < needle.length(); j++) {
-                if (haystack.charAt(i + j) != needle.charAt(j)) {
-                    continue search;
-                }
-            }
-            return i;
-        }
-
-        return -1;
     }
 
     /**
      * Sunday algorithm.
      */
-    public int strStr2(String haystack, String needle) {
-        if (haystack == null || needle == null) {
+    class Solution2 {
+        public int strStr(String haystack, String needle) {
+            if (haystack == null || needle == null) {
+                return -1;
+            }
+
+            if (needle.length() == 0) {
+                return 0;
+            }
+
+            HashMap<Character, Integer> stepMap = getSundayStepMap(needle);
+            int i = 0;
+            while (i < haystack.length() - needle.length() + 1) {
+
+                int j = 0;
+                while (j < needle.length() && haystack.charAt(i + j) == needle.charAt(j)) {
+                    if (j >= needle.length() - 1) {
+                        return i;
+                    }
+                    j++;
+                }
+
+                if (needle.length() + i < haystack.length()
+                        && stepMap.containsKey(haystack.charAt(i + needle.length()))) {
+                    i += stepMap.get(haystack.charAt(i + needle.length()));
+                } else {
+                    i += needle.length() + 1;
+                }
+            }
+
             return -1;
         }
 
-        if (needle.length() == 0) {
-            return 0;
-        }
-
-        HashMap<Character, Integer> stepMap = getSundayStepMap(needle);
-        int i = 0;
-        while (i < haystack.length() - needle.length() + 1) {
-
-            int j = 0;
-            while (j < needle.length() && haystack.charAt(i + j) == needle.charAt(j)) {
-                if (j >= needle.length() - 1) {
-                    return i;
-                }
-                j++;
+        private HashMap<Character, Integer> getSundayStepMap(String needle) {
+            HashMap<Character, Integer> stepMap = new HashMap<Character, Integer>();
+            for (int i = 0; i < needle.length(); i++) {
+                stepMap.put(needle.charAt(i), needle.length() - i);
             }
-
-            if (needle.length() + i < haystack.length()
-                    && stepMap.containsKey(haystack.charAt(i + needle.length()))) {
-                i += stepMap.get(haystack.charAt(i + needle.length()));
-            } else {
-                i += needle.length() + 1;
-            }
+            return stepMap;
         }
-
-        return -1;
-    }
-
-    private HashMap<Character, Integer> getSundayStepMap(String needle) {
-        HashMap<Character, Integer> stepMap = new HashMap<Character, Integer>();
-        for (int i = 0; i < needle.length(); i++) {
-            stepMap.put(needle.charAt(i), needle.length() - i);
-        }
-        return stepMap;
     }
 
 }

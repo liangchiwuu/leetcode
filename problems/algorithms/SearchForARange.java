@@ -19,7 +19,7 @@ public class SearchForARange {
         int[] nums = { 5, 7, 7, 8, 8, 10 };
         int target = 8;
 
-        int[] result = new SearchForARange().searchRange(nums, target);
+        int[] result = new SearchForARange().new Solution().searchRange(nums, target);
         System.out.println(Arrays.toString(result));
     }
 
@@ -28,56 +28,58 @@ public class SearchForARange {
      * 
      * Time complexity: O(log n)
      */
-    public int[] searchRange(int[] nums, int target) {
-        if (nums == null || nums.length == 0) {
-            return new int[] { -1, -1 };
-        }
-
-        int start = 0;
-        int end = nums.length - 1;
-        int[] bound = new int[2];
-
-        // search for left bound
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (nums[mid] == target) {
-                end = mid;
-            } else if (nums[mid] > target) {
-                end = mid - 1;
-            } else if (nums[mid] < target) {
-                start = mid + 1;
+    class Solution {
+        public int[] searchRange(int[] nums, int target) {
+            if (nums == null || nums.length == 0) {
+                return new int[] { -1, -1 };
             }
-        }
 
-        if (nums[start] == target) {
-            bound[0] = start;
-        } else if (nums[end] == target) {
-            bound[0] = end;
-        } else {
-            return new int[] { -1, -1 };
-        }
+            int start = 0;
+            int end = nums.length - 1;
+            int[] bound = new int[2];
 
-        start = 0;
-        end = nums.length - 1;
-
-        // search for right bound
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (nums[mid] == target) {
-                start = mid;
-            } else if (nums[mid] > target) {
-                end = mid - 1;
-            } else if (nums[mid] < target) {
-                start = mid + 1;
+            // search for left bound
+            while (start + 1 < end) {
+                int mid = start + (end - start) / 2;
+                if (nums[mid] == target) {
+                    end = mid;
+                } else if (nums[mid] > target) {
+                    end = mid - 1;
+                } else if (nums[mid] < target) {
+                    start = mid + 1;
+                }
             }
-        }
 
-        if (nums[end] == target) {
-            bound[1] = end;
-        } else if (nums[start] == target) {
-            bound[1] = start;
-        }
+            if (nums[start] == target) {
+                bound[0] = start;
+            } else if (nums[end] == target) {
+                bound[0] = end;
+            } else {
+                return new int[] { -1, -1 };
+            }
 
-        return bound;
+            start = 0;
+            end = nums.length - 1;
+
+            // search for right bound
+            while (start + 1 < end) {
+                int mid = start + (end - start) / 2;
+                if (nums[mid] == target) {
+                    start = mid;
+                } else if (nums[mid] > target) {
+                    end = mid - 1;
+                } else if (nums[mid] < target) {
+                    start = mid + 1;
+                }
+            }
+
+            if (nums[end] == target) {
+                bound[1] = end;
+            } else if (nums[start] == target) {
+                bound[1] = start;
+            }
+
+            return bound;
+        }
     }
 }

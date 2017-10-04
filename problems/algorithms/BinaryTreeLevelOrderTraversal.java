@@ -41,7 +41,7 @@ public class BinaryTreeLevelOrderTraversal {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        List<List<Integer>> result = new BinaryTreeLevelOrderTraversal().levelOrder(root);
+        List<List<Integer>> result = new BinaryTreeLevelOrderTraversal().new Solution().levelOrder(root);
         System.out.println(result);
     }
 
@@ -51,62 +51,29 @@ public class BinaryTreeLevelOrderTraversal {
      *
      * Time complexity: O(n)
      */
-    public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+    class Solution {
+        public List<List<Integer>> levelOrder(TreeNode root) {
+            List<List<Integer>> result = new ArrayList<List<Integer>>();
 
-        if (root == null) {
-            return result;
-        }
-
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.offer(null);
-        queue.offer(root);
-
-        while (queue.size() > 1) {
-            TreeNode node = queue.poll();
-
-            // run into dummy node, move to next level
-            if (node == null) {
-                result.add(new ArrayList<Integer>());
-                queue.offer(null);
-                continue;
+            if (root == null) {
+                return result;
             }
 
-            result.get(result.size() - 1).add(node.val);
-            if (node.left != null) {
-                queue.offer(node.left);
-            }
-            if (node.right != null) {
-                queue.offer(node.right);
-            }
-        }
+            Queue<TreeNode> queue = new LinkedList<TreeNode>();
+            queue.offer(null);
+            queue.offer(root);
 
-        return result;
-    }
-
-    /**
-     * Another BFS solution. The difference between this solution and the previous one is that instead of dummy node, we
-     * first get the # of nodes in current level, then process one level at a time.
-     *
-     * Time complexity: O(n)
-     */
-    public List<List<Integer>> levelOrder2(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-
-        if (root == null) {
-            return result;
-        }
-
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.offer(root);
-
-        while (!queue.isEmpty()) {
-            List<Integer> level = new ArrayList<Integer>();
-            int numOfNodes = queue.size();
-
-            for (int i = 0; i < numOfNodes; i++) {
+            while (queue.size() > 1) {
                 TreeNode node = queue.poll();
-                level.add(node.val);
+
+                // run into dummy node, move to next level
+                if (node == null) {
+                    result.add(new ArrayList<Integer>());
+                    queue.offer(null);
+                    continue;
+                }
+
+                result.get(result.size() - 1).add(node.val);
                 if (node.left != null) {
                     queue.offer(node.left);
                 }
@@ -115,10 +82,47 @@ public class BinaryTreeLevelOrderTraversal {
                 }
             }
 
-            result.add(level);
+            return result;
         }
+    }
 
-        return result;
+    /**
+     * Another BFS solution. The difference between this solution and the previous one is that instead of dummy node, we
+     * first get the # of nodes in current level, then process one level at a time.
+     *
+     * Time complexity: O(n)
+     */
+    class Solution2 {
+        public List<List<Integer>> levelOrder(TreeNode root) {
+            List<List<Integer>> result = new ArrayList<List<Integer>>();
+
+            if (root == null) {
+                return result;
+            }
+
+            Queue<TreeNode> queue = new LinkedList<TreeNode>();
+            queue.offer(root);
+
+            while (!queue.isEmpty()) {
+                List<Integer> level = new ArrayList<Integer>();
+                int numOfNodes = queue.size();
+
+                for (int i = 0; i < numOfNodes; i++) {
+                    TreeNode node = queue.poll();
+                    level.add(node.val);
+                    if (node.left != null) {
+                        queue.offer(node.left);
+                    }
+                    if (node.right != null) {
+                        queue.offer(node.right);
+                    }
+                }
+
+                result.add(level);
+            }
+
+            return result;
+        }
     }
 
     /**
@@ -127,39 +131,41 @@ public class BinaryTreeLevelOrderTraversal {
      * 
      * Time complexity: O(n log n)
      */
-    public List<List<Integer>> levelOrder3(TreeNode root) {
-        List<List<Integer>> results = new ArrayList<List<Integer>>();
+    class Solution3 {
+        public List<List<Integer>> levelOrder(TreeNode root) {
+            List<List<Integer>> results = new ArrayList<List<Integer>>();
 
-        if (root == null) {
+            if (root == null) {
+                return results;
+            }
+
+            int targetLevel = 0;
+            while (true) {
+                List<Integer> level = new ArrayList<Integer>();
+                dfs(root, level, 0, targetLevel);
+                if (level.size() == 0) {
+                    break;
+                }
+                results.add(level);
+                targetLevel++;
+            }
+
             return results;
         }
 
-        int targetLevel = 0;
-        while (true) {
-            List<Integer> level = new ArrayList<Integer>();
-            dfs(root, level, 0, targetLevel);
-            if (level.size() == 0) {
-                break;
+        private void dfs(TreeNode root, List<Integer> level, int curtLevel, int targetLevel) {
+            if (root == null || curtLevel > targetLevel) {
+                return;
             }
-            results.add(level);
-            targetLevel++;
+
+            if (curtLevel == targetLevel) {
+                level.add(root.val);
+                return;
+            }
+
+            dfs(root.left, level, curtLevel + 1, targetLevel);
+            dfs(root.right, level, curtLevel + 1, targetLevel);
         }
-
-        return results;
-    }
-
-    private void dfs(TreeNode root, List<Integer> level, int curtLevel, int targetLevel) {
-        if (root == null || curtLevel > targetLevel) {
-            return;
-        }
-
-        if (curtLevel == targetLevel) {
-            level.add(root.val);
-            return;
-        }
-
-        dfs(root.left, level, curtLevel + 1, targetLevel);
-        dfs(root.right, level, curtLevel + 1, targetLevel);
     }
 
 }

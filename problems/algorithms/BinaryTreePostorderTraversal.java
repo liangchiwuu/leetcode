@@ -37,7 +37,7 @@ public class BinaryTreePostorderTraversal {
         root.left.right = new TreeNode(5);
         root.right = new TreeNode(3);
 
-        List<Integer> result = new BinaryTreePostorderTraversal().postorderTraversal(root);
+        List<Integer> result = new BinaryTreePostorderTraversal().new Solution().postorderTraversal(root);
         System.out.println(result);
     }
 
@@ -47,17 +47,19 @@ public class BinaryTreePostorderTraversal {
      *
      * Time complexity: O(n)
      */
-    public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        if (root == null) {
+    class Solution {
+        public List<Integer> postorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            if (root == null) {
+                return result;
+            }
+
+            result.addAll(postorderTraversal(root.left));
+            result.addAll(postorderTraversal(root.right));
+            result.add(root.val);
+
             return result;
         }
-
-        result.addAll(postorderTraversal(root.left));
-        result.addAll(postorderTraversal(root.right));
-        result.add(root.val);
-
-        return result;
     }
 
     /**
@@ -65,20 +67,22 @@ public class BinaryTreePostorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> postorderTraversal2(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        traverse(root, result);
-        return result;
-    }
-
-    private void traverse(TreeNode root, List<Integer> result) {
-        if (root == null) {
-            return;
+    class Solution2 {
+        public List<Integer> postorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            traverse(root, result);
+            return result;
         }
 
-        traverse(root.left, result);
-        traverse(root.right, result);
-        result.add(root.val);
+        private void traverse(TreeNode root, List<Integer> result) {
+            if (root == null) {
+                return;
+            }
+
+            traverse(root.left, result);
+            traverse(root.right, result);
+            result.add(root.val);
+        }
     }
 
     /**
@@ -93,32 +97,34 @@ public class BinaryTreePostorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> postorderTraversal3(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        List<Integer> preorder = new LinkedList<Integer>();
-        List<Integer> postorder = new LinkedList<Integer>();
+    class Solution3 {
+        public List<Integer> postorderTraversal(TreeNode root) {
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            List<Integer> preorder = new LinkedList<Integer>();
+            List<Integer> postorder = new LinkedList<Integer>();
 
-        if (root == null) {
+            if (root == null) {
+                return postorder;
+            }
+
+            stack.push(root);
+            while (!stack.isEmpty()) {
+                TreeNode node = stack.pop();
+                preorder.add(node.val);
+                if (node.left != null) {
+                    stack.push(node.left);
+                }
+                if (node.right != null) {
+                    stack.push(node.right);
+                }
+            }
+
+            for (int node : preorder) {
+                postorder.add(0, node);
+            }
+
             return postorder;
         }
-
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            preorder.add(node.val);
-            if (node.left != null) {
-                stack.push(node.left);
-            }
-            if (node.right != null) {
-                stack.push(node.right);
-            }
-        }
-
-        for (int node : preorder) {
-            postorder.add(0, node);
-        }
-
-        return postorder;
     }
 
     /**
@@ -126,41 +132,43 @@ public class BinaryTreePostorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> postorderTraversal4(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        // previously traversed node
-        TreeNode prev = null;
-        TreeNode curr = root;
+    class Solution4 {
+        public List<Integer> postorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            // previously traversed node
+            TreeNode prev = null;
+            TreeNode curr = root;
 
-        if (root == null) {
+            if (root == null) {
+                return result;
+            }
+
+            stack.push(root);
+            while (!stack.empty()) {
+                curr = stack.peek();
+                if (prev == null || prev.left == curr || prev.right == curr) {
+                    // traverse down the tree
+                    if (curr.left != null) {
+                        stack.push(curr.left);
+                    } else if (curr.right != null) {
+                        stack.push(curr.right);
+                    }
+                } else if (curr.left == prev) {
+                    // traverse up the tree from the left
+                    if (curr.right != null) {
+                        stack.push(curr.right);
+                    }
+                } else {
+                    // traverse up the tree from the right
+                    result.add(curr.val);
+                    stack.pop();
+                }
+                prev = curr;
+            }
+
             return result;
         }
-
-        stack.push(root);
-        while (!stack.empty()) {
-            curr = stack.peek();
-            if (prev == null || prev.left == curr || prev.right == curr) {
-                // traverse down the tree
-                if (curr.left != null) {
-                    stack.push(curr.left);
-                } else if (curr.right != null) {
-                    stack.push(curr.right);
-                }
-            } else if (curr.left == prev) {
-                // traverse up the tree from the left
-                if (curr.right != null) {
-                    stack.push(curr.right);
-                }
-            } else {
-                // traverse up the tree from the right
-                result.add(curr.val);
-                stack.pop();
-            }
-            prev = curr;
-        }
-
-        return result;
     }
 
     /**
@@ -170,34 +178,36 @@ public class BinaryTreePostorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> postorderTraversal5(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        // previously traversed node
-        TreeNode prev = null;
-        TreeNode curr = root;
+    class Solution5 {
+        public List<Integer> postorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            // previously traversed node
+            TreeNode prev = null;
+            TreeNode curr = root;
 
-        if (root == null) {
+            if (root == null) {
+                return result;
+            }
+
+            while (!stack.empty() || curr != null) {
+                // find the bottom left node
+                while (curr != null) {
+                    stack.push(curr);
+                    curr = curr.left;
+                }
+
+                TreeNode peek = stack.peek();
+                // if right child exists and traversing node from left child, then move right
+                if (peek.right != null && (prev == null || prev.val != peek.right.val)) {
+                    curr = peek.right;
+                } else {
+                    result.add(peek.val);
+                    prev = stack.pop();
+                }
+            }
+
             return result;
         }
-
-        while (!stack.empty() || curr != null) {
-            // find the bottom left node
-            while (curr != null) {
-                stack.push(curr);
-                curr = curr.left;
-            }
-
-            TreeNode peek = stack.peek();
-            // if right child exists and traversing node from left child, then move right
-            if (peek.right != null && (prev == null || prev.val != peek.right.val)) {
-                curr = peek.right;
-            } else {
-                result.add(peek.val);
-                prev = stack.pop();
-            }
-        }
-
-        return result;
     }
 }

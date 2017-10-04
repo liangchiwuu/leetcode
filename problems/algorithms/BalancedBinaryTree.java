@@ -25,7 +25,7 @@ public class BalancedBinaryTree {
         root.left.right = new TreeNode(5);
         root.right = new TreeNode(3);
 
-        boolean result = new BalancedBinaryTree().isBalanced(root);
+        boolean result = new BalancedBinaryTree().new Solution().isBalanced(root);
         System.out.println(result);
     }
 
@@ -42,25 +42,27 @@ public class BalancedBinaryTree {
      * 
      * Time complexity: O(n)
      */
-    public boolean isBalanced(TreeNode root) {
-        return maxDepth(root) != UNBALANCED;
-    }
+    class Solution {
+        final int UNBALANCED = -1;
 
-    final int UNBALANCED = -1;
-
-    private int maxDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
+        public boolean isBalanced(TreeNode root) {
+            return maxDepth(root) != UNBALANCED;
         }
 
-        int leftDepth = maxDepth(root.left);
-        int rightDepth = maxDepth(root.right);
+        private int maxDepth(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
 
-        if (leftDepth == UNBALANCED || rightDepth == UNBALANCED || Math.abs(leftDepth - rightDepth) > 1) {
-            return UNBALANCED;
+            int leftDepth = maxDepth(root.left);
+            int rightDepth = maxDepth(root.right);
+
+            if (leftDepth == UNBALANCED || rightDepth == UNBALANCED || Math.abs(leftDepth - rightDepth) > 1) {
+                return UNBALANCED;
+            }
+
+            return Math.max(leftDepth, rightDepth) + 1;
         }
-
-        return Math.max(leftDepth, rightDepth) + 1;
     }
 
     /**
@@ -69,32 +71,34 @@ public class BalancedBinaryTree {
      * 
      * Time complexity: O(n)
      */
-    public boolean isBalanced2(TreeNode root) {
-        return helper(root).isBalanced;
-    }
+    class Solution2 {
+        class Result {
+            boolean isBalanced;
+            int depth;
 
-    class Result {
-        boolean isBalanced;
-        int depth;
-
-        Result(boolean isBalanced, int depth) {
-            this.isBalanced = isBalanced;
-            this.depth = depth;
-        }
-    }
-
-    private Result helper(TreeNode root) {
-        if (root == null) {
-            return new Result(true, 0);
+            Result(boolean isBalanced, int depth) {
+                this.isBalanced = isBalanced;
+                this.depth = depth;
+            }
         }
 
-        Result left = helper(root.left);
-        Result right = helper(root.right);
+        public boolean isBalanced(TreeNode root) {
+            return helper(root).isBalanced;
+        }
 
-        boolean isBalanced = left.isBalanced && right.isBalanced && Math.abs(left.depth - right.depth) <= 1;
-        int depth = Math.max(left.depth, right.depth) + 1;
+        private Result helper(TreeNode root) {
+            if (root == null) {
+                return new Result(true, 0);
+            }
 
-        return new Result(isBalanced, depth);
+            Result left = helper(root.left);
+            Result right = helper(root.right);
+
+            boolean isBalanced = left.isBalanced && right.isBalanced && Math.abs(left.depth - right.depth) <= 1;
+            int depth = Math.max(left.depth, right.depth) + 1;
+
+            return new Result(isBalanced, depth);
+        }
     }
 
 }

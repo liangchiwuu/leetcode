@@ -21,7 +21,7 @@ public class SearchA2DMatrix {
     public static void main(String[] args) {
         int[][] matrix = { { 1, 3, 5, 7 }, { 10, 11, 16, 20 }, { 23, 30, 34, 50 } };
         int target = 11;
-        boolean result = new SearchA2DMatrix().searchMatrix(matrix, target);
+        boolean result = new SearchA2DMatrix().new Solution().searchMatrix(matrix, target);
         System.out.println(result);
     }
 
@@ -30,51 +30,53 @@ public class SearchA2DMatrix {
      * 
      * Time complexity: O(log n + log m)
      */
-    public boolean searchMatrix(int[][] matrix, int target) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            return false;
-        }
-
-        int start = 0;
-        int end = matrix.length - 1;
-
-        // find the row that possibly contains target
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            int[] midArray = matrix[mid];
-            if (midArray[0] > target) {
-                end = mid;
-            } else {
-                start = mid;
+    class Solution {
+        public boolean searchMatrix(int[][] matrix, int target) {
+            if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+                return false;
             }
-        }
 
-        int[] row;
-        if (matrix[end][0] > target) {
-            row = matrix[start];
-        } else {
-            row = matrix[end];
-        }
+            int start = 0;
+            int end = matrix.length - 1;
 
-        start = 0;
-        end = row.length - 1;
+            // find the row that possibly contains target
+            while (start + 1 < end) {
+                int mid = start + (end - start) / 2;
+                int[] midArray = matrix[mid];
+                if (midArray[0] > target) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            }
 
-        // find target in this row
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (row[mid] == target) {
+            int[] row;
+            if (matrix[end][0] > target) {
+                row = matrix[start];
+            } else {
+                row = matrix[end];
+            }
+
+            start = 0;
+            end = row.length - 1;
+
+            // find target in this row
+            while (start + 1 < end) {
+                int mid = start + (end - start) / 2;
+                if (row[mid] == target) {
+                    return true;
+                } else if (row[mid] > target) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            }
+
+            if (row[start] == target || row[end] == target) {
                 return true;
-            } else if (row[mid] > target) {
-                end = mid;
             } else {
-                start = mid;
+                return false;
             }
-        }
-
-        if (row[start] == target || row[end] == target) {
-            return true;
-        } else {
-            return false;
         }
     }
 

@@ -11,10 +11,18 @@ package algorithms;
  * You are given an API bool isBadVersion(version) which will return whether version is bad. Implement a function to
  * find the first bad version. You should minimize the number of calls to the API.
  */
-public class FirstBadVersion extends VersionControl {
+public class FirstBadVersion {
+
+    static class VersionControl {
+        static boolean[] versionStatus = new boolean[] { false, false, false, true, true };
+
+        public static boolean isBadVersion(int version) {
+            return versionStatus[version - 1];
+        }
+    }
 
     public static void main(String[] args) {
-        int result = new FirstBadVersion().firstBadVersion(5);
+        int result = new FirstBadVersion().new Solution().firstBadVersion(5);
         System.out.println(result);
     }
 
@@ -24,31 +32,25 @@ public class FirstBadVersion extends VersionControl {
      * Time complexity: O(log n)
      * Space complexity: O(1)
      */
-    public int firstBadVersion(int n) {
-        int start = 1;
-        int end = n;
+    class Solution extends VersionControl {
+        public int firstBadVersion(int n) {
+            int start = 1;
+            int end = n;
 
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (isBadVersion(mid)) {
-                end = mid;
-            } else {
-                start = mid;
+            while (start + 1 < end) {
+                int mid = start + (end - start) / 2;
+                if (isBadVersion(mid)) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
             }
-        }
 
-        if (isBadVersion(start)) {
-            return start;
+            if (isBadVersion(start)) {
+                return start;
+            }
+            return end;
         }
-        return end;
     }
 
-}
-
-class VersionControl {
-    static boolean[] versionStatus = new boolean[] { false, false, false, true, true };
-
-    public static boolean isBadVersion(int version) {
-        return versionStatus[version - 1];
-    }
 }

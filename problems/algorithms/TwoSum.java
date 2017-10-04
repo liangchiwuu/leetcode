@@ -17,7 +17,7 @@ public class TwoSum {
     public static void main(String[] args) {
         int[] nums = { 2, 7, 11, 15 };
         int target = 9;
-        int[] result = new TwoSum().twoSum(nums, target);
+        int[] result = new TwoSum().new Solution().twoSum(nums, target);
         System.out.println("Result: " + Arrays.toString(result));
     }
 
@@ -26,21 +26,23 @@ public class TwoSum {
      * 
      * Time complexity: O(n^2)
      */
-    public int[] twoSum(int[] nums, int target) {
-        int[] result = new int[2];
-        int length = nums.length;
+    class Solution {
+        public int[] twoSum(int[] nums, int target) {
+            int[] result = new int[2];
+            int length = nums.length;
 
-        for (int i = 0; i < length; i++) {
-            int j = i + 1;
-            while (j < length) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[] { i, j };
+            for (int i = 0; i < length; i++) {
+                int j = i + 1;
+                while (j < length) {
+                    if (nums[i] + nums[j] == target) {
+                        return new int[] { i, j };
+                    }
+                    j++;
                 }
-                j++;
             }
-        }
 
-        return result;
+            return result;
+        }
     }
 
     /**
@@ -49,24 +51,26 @@ public class TwoSum {
      * 
      * Time complexity: O(n)
      */
-    public int[] twoSum2(int[] nums, int target) {
-        int i = 0;
-        int j = 0;
-        int length = nums.length;
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+    class Solution2 {
+        public int[] twoSum(int[] nums, int target) {
+            int i = 0;
+            int j = 0;
+            int length = nums.length;
+            HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-        for (int k = 0; k < length; k++) {
-            int diff = target - nums[k];
-            if (map.containsKey(diff)) {
-                i = k;
-                j = map.get(diff);
-                break;
-            } else {
-                map.put(nums[k], k);
+            for (int k = 0; k < length; k++) {
+                int diff = target - nums[k];
+                if (map.containsKey(diff)) {
+                    i = k;
+                    j = map.get(diff);
+                    break;
+                } else {
+                    map.put(nums[k], k);
+                }
             }
-        }
 
-        return new int[] { i, j };
+            return new int[] { i, j };
+        }
     }
 
 }

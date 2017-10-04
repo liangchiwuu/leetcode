@@ -10,7 +10,7 @@ public class ReverseString {
 
     public static void main(String[] args) {
         String in = "hello";
-        String out = new ReverseString().reverseString(in);
+        String out = new ReverseString().new Solution().reverseString(in);
         System.out.println(out);
 
     }
@@ -20,28 +20,30 @@ public class ReverseString {
      * 
      * Time complexity: O(n)
      */
-    public String reverseString(String s) {
-        if (s == null || s.length() == 0) {
-            return "";
+    class Solution {
+        public String reverseString(String s) {
+            if (s == null || s.length() == 0) {
+                return "";
+            }
+
+            char[] cs = s.toCharArray();
+            int start = 0;
+            int end = s.length() - 1;
+
+            while (start < end) {
+                swap(cs, start, end);
+                start++;
+                end--;
+            }
+
+            return new String(cs);
         }
 
-        char[] cs = s.toCharArray();
-        int start = 0;
-        int end = s.length() - 1;
-
-        while (start < end) {
-            swap(cs, start, end);
-            start++;
-            end--;
+        private void swap(char[] cs, int i, int j) {
+            char temp = cs[i];
+            cs[i] = cs[j];
+            cs[j] = temp;
         }
-
-        return new String(cs);
-    }
-
-    private void swap(char[] cs, int i, int j) {
-        char temp = cs[i];
-        cs[i] = cs[j];
-        cs[j] = temp;
     }
 
 }

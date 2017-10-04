@@ -13,7 +13,7 @@ public class SingleNumberII {
 
     public static void main(String[] args) {
         int[] nums = { 1, 1, 2, 3, 3, 3, 2, 2, 4, 1 };
-        int result = new SingleNumberII().singleNumber(nums);
+        int result = new SingleNumberII().new Solution().singleNumber(nums);
         System.out.println(result);
     }
 
@@ -27,25 +27,27 @@ public class SingleNumberII {
      * Time complexity: O(n)
      * Space complexity: O(n)
      */
-    public int singleNumber(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
+    class Solution {
+        public int singleNumber(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return -1;
+            }
 
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for (int e : nums) {
-            if (!map.containsKey(e)) {
-                map.put(e, null);
-            } else {
-                if (map.get(e) == null) {
-                    map.put(e, e);
+            HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+            for (int e : nums) {
+                if (!map.containsKey(e)) {
+                    map.put(e, null);
                 } else {
-                    map.remove(e);
+                    if (map.get(e) == null) {
+                        map.put(e, e);
+                    } else {
+                        map.remove(e);
+                    }
                 }
             }
-        }
 
-        return map.keySet().iterator().next();
+            return map.keySet().iterator().next();
+        }
     }
 
     /**
@@ -54,22 +56,24 @@ public class SingleNumberII {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int singleNumber2(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
-
-        int result = 0;
-        int[] bits = new int[32];
-        for (int i = 0; i < 32; i++) {
-            for (int j = 0; j < nums.length; j++) {
-                bits[i] += nums[j] >> i & 1;
+    class Solution2 {
+        public int singleNumber(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return -1;
             }
-            bits[i] %= 3;
-            result |= (bits[i] << i);
-        }
 
-        return result;
+            int result = 0;
+            int[] bits = new int[32];
+            for (int i = 0; i < 32; i++) {
+                for (int j = 0; j < nums.length; j++) {
+                    bits[i] += nums[j] >> i & 1;
+                }
+                bits[i] %= 3;
+                result |= (bits[i] << i);
+            }
+
+            return result;
+        }
     }
 
 }

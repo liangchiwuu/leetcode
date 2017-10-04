@@ -46,7 +46,7 @@ public class FlattenBinaryTreeToLinkedList {
         root.right = new TreeNode(5);
         root.right.right = new TreeNode(6);
 
-        new FlattenBinaryTreeToLinkedList().flatten2(root);
+        new FlattenBinaryTreeToLinkedList().new Solution().flatten(root);
         TreeNode curr = root;
         while (curr != null) {
             System.out.println(curr.val);
@@ -61,33 +61,35 @@ public class FlattenBinaryTreeToLinkedList {
      *
      * Time complexity: O(n)
      */
-    public void flatten(TreeNode root) {
-        helper(root);
-    }
-
-    private TreeNode helper(TreeNode root) {
-        if (root == null) {
-            return null;
+    class Solution {
+        public void flatten(TreeNode root) {
+            helper(root);
         }
 
-        TreeNode leftLast = helper(root.left);
-        TreeNode rightLast = helper(root.right);
+        private TreeNode helper(TreeNode root) {
+            if (root == null) {
+                return null;
+            }
 
-        // divide and conquer
-        if (leftLast != null) {
-            leftLast.right = root.right;
-            root.right = root.left;
-            root.left = null;
-        }
+            TreeNode leftLast = helper(root.left);
+            TreeNode rightLast = helper(root.right);
 
-        // return 'current last' node
-        if (rightLast != null) {
-            return rightLast;
+            // divide and conquer
+            if (leftLast != null) {
+                leftLast.right = root.right;
+                root.right = root.left;
+                root.left = null;
+            }
+
+            // return 'current last' node
+            if (rightLast != null) {
+                return rightLast;
+            }
+            if (leftLast != null) {
+                return leftLast;
+            }
+            return root;
         }
-        if (leftLast != null) {
-            return leftLast;
-        }
-        return root;
     }
 
     /**
@@ -99,52 +101,56 @@ public class FlattenBinaryTreeToLinkedList {
      * 
      * Time complexity: O(n)
      */
-    public void flatten2(TreeNode root) {
-        if (root == null) {
-            return;
-        }
+    class Solution2 {
+        private TreeNode lastNode = null;
 
-        if (lastNode != null) {
-            lastNode.left = null;
-            lastNode.right = root;
-        }
+        public void flatten(TreeNode root) {
+            if (root == null) {
+                return;
+            }
 
-        lastNode = root;
-        TreeNode right = root.right;
-        flatten2(root.left);
-        flatten2(right);
+            if (lastNode != null) {
+                lastNode.left = null;
+                lastNode.right = root;
+            }
+
+            lastNode = root;
+            TreeNode right = root.right;
+            flatten(root.left);
+            flatten(right);
+        }
     }
-
-    private TreeNode lastNode = null;
 
     /**
      * An iterative solution. Basically preorder traverse a tree and changing the connections on the way.
      * 
      * Time complexity: O(n)
      */
-    public void flatten3(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.push(root);
-
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            if (node.right != null) {
-                stack.push(node.right);
-            }
-            if (node.left != null) {
-                stack.push(node.left);
+    class Solution3 {
+        public void flatten(TreeNode root) {
+            if (root == null) {
+                return;
             }
 
-            // connect
-            node.left = null;
-            if (stack.empty()) {
-                node.right = null;
-            } else {
-                node.right = stack.peek();
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            stack.push(root);
+
+            while (!stack.isEmpty()) {
+                TreeNode node = stack.pop();
+                if (node.right != null) {
+                    stack.push(node.right);
+                }
+                if (node.left != null) {
+                    stack.push(node.left);
+                }
+
+                // connect
+                node.left = null;
+                if (stack.empty()) {
+                    node.right = null;
+                } else {
+                    node.right = stack.peek();
+                }
             }
         }
     }

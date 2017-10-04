@@ -26,7 +26,7 @@ public class MaximumDepthOfBinaryTree {
         root.left.right = new TreeNode(5);
         root.right = new TreeNode(3);
 
-        int result = new MaximumDepthOfBinaryTree().maxDepth(root);
+        int result = new MaximumDepthOfBinaryTree().new Solution().maxDepth(root);
         System.out.println(result);
     }
 
@@ -36,15 +36,17 @@ public class MaximumDepthOfBinaryTree {
      *
      * Time complexity: O(n)
      */
-    public int maxDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
+    public class Solution {
+        public int maxDepth(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
+
+            int leftDepth = maxDepth(root.left);
+            int rightDepth = maxDepth(root.right);
+
+            return Math.max(leftDepth, rightDepth) + 1;
         }
-
-        int leftDepth = maxDepth(root.left);
-        int rightDepth = maxDepth(root.right);
-
-        return Math.max(leftDepth, rightDepth) + 1;
     }
 
     /**
@@ -52,23 +54,25 @@ public class MaximumDepthOfBinaryTree {
      * 
      * Time complexity: O(n)
      */
-    public int maxDepth2(TreeNode root) {
-        maxDepth = 0;
-        helper(root, 1);
+    public class Solution2 {
+        private int maxDepth;
 
-        return maxDepth;
-    }
+        public int maxDepth(TreeNode root) {
+            maxDepth = 0;
+            helper(root, 1);
 
-    private int maxDepth;
-
-    private void helper(TreeNode node, int currentDepth) {
-        if (node == null) {
-            return;
+            return maxDepth;
         }
 
-        maxDepth = Math.max(maxDepth, currentDepth);
-        helper(node.left, currentDepth + 1);
-        helper(node.right, currentDepth + 1);
+        private void helper(TreeNode node, int currentDepth) {
+            if (node == null) {
+                return;
+            }
+
+            maxDepth = Math.max(maxDepth, currentDepth);
+            helper(node.left, currentDepth + 1);
+            helper(node.right, currentDepth + 1);
+        }
     }
 
     /**
@@ -76,37 +80,39 @@ public class MaximumDepthOfBinaryTree {
      * 
      * Time complexity: O(n)
      */
-    public int maxDepth3(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
+    public class Solution3 {
+        class Box {
+            TreeNode node;
+            int depth;
 
-        Stack<Box> stack = new Stack<Box>();
-        int maxDepth = 1;
-
-        stack.push(new Box(root, 1));
-        while (!stack.isEmpty()) {
-            Box box = stack.pop();
-            maxDepth = Math.max(maxDepth, box.depth);
-
-            if (box.node.right != null) {
-                stack.push(new Box(box.node.right, box.depth + 1));
-            }
-            if (box.node.left != null) {
-                stack.push(new Box(box.node.left, box.depth + 1));
+            Box(TreeNode node, int depth) {
+                this.node = node;
+                this.depth = depth;
             }
         }
 
-        return maxDepth;
-    }
+        public int maxDepth(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
 
-    static class Box {
-        TreeNode node;
-        int depth;
+            Stack<Box> stack = new Stack<Box>();
+            int maxDepth = 1;
 
-        Box(TreeNode node, int depth) {
-            this.node = node;
-            this.depth = depth;
+            stack.push(new Box(root, 1));
+            while (!stack.isEmpty()) {
+                Box box = stack.pop();
+                maxDepth = Math.max(maxDepth, box.depth);
+
+                if (box.node.right != null) {
+                    stack.push(new Box(box.node.right, box.depth + 1));
+                }
+                if (box.node.left != null) {
+                    stack.push(new Box(box.node.left, box.depth + 1));
+                }
+            }
+
+            return maxDepth;
         }
     }
 

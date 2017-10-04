@@ -36,7 +36,7 @@ public class BinaryTreePaths {
         root.left.right = new TreeNode(5);
         root.right = new TreeNode(3);
 
-        List<String> result = new BinaryTreePaths().binaryTreePaths(root);
+        List<String> result = new BinaryTreePaths().new Solution().binaryTreePaths(root);
         System.out.println(result);
     }
 
@@ -46,30 +46,32 @@ public class BinaryTreePaths {
      *
      * Time complexity: O(n)
      */
-    public List<String> binaryTreePaths(TreeNode root) {
-        List<String> paths = new ArrayList<String>();
+    class Solution {
+        public List<String> binaryTreePaths(TreeNode root) {
+            List<String> paths = new ArrayList<String>();
 
-        if (root == null) {
+            if (root == null) {
+                return paths;
+            }
+            if (root.left == null && root.right == null) {
+                paths.add(Integer.toString(root.val));
+                return paths;
+            }
+
+            // divide
+            List<String> leftPaths = binaryTreePaths(root.left);
+            List<String> rightPaths = binaryTreePaths(root.right);
+
+            // conquer
+            for (String path : leftPaths) {
+                paths.add(root.val + "->" + path);
+            }
+            for (String path : rightPaths) {
+                paths.add(root.val + "->" + path);
+            }
+
             return paths;
         }
-        if (root.left == null && root.right == null) {
-            paths.add(Integer.toString(root.val));
-            return paths;
-        }
-
-        // divide
-        List<String> leftPaths = binaryTreePaths(root.left);
-        List<String> rightPaths = binaryTreePaths(root.right);
-
-        // conquer
-        for (String path : leftPaths) {
-            paths.add(root.val + "->" + path);
-        }
-        for (String path : rightPaths) {
-            paths.add(root.val + "->" + path);
-        }
-
-        return paths;
     }
 
 }

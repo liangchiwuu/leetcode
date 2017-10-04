@@ -16,7 +16,7 @@ public class LongestIncreasingSubsequence {
 
     public static void main(String[] args) {
         int[] nums = { 10, 9, 2, 5, 3, 7, 101, 18 };
-        int result = new LongestIncreasingSubsequence().lengthOfLIS(nums);
+        int result = new LongestIncreasingSubsequence().new Solution().lengthOfLIS(nums);
         System.out.println(result);
     }
 
@@ -25,39 +25,43 @@ public class LongestIncreasingSubsequence {
      * 
      * Time complexity: O(n^2)
      */
-    public int lengthOfLIS(int[] nums) {
-        if (nums.length == 0) {
-            return 0;
-        }
+    class Solution {
+        public int lengthOfLIS(int[] nums) {
+            if (nums.length == 0) {
+                return 0;
+            }
 
-        int[] length = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            length[i] = 1;
-        }
+            int[] length = new int[nums.length];
+            for (int i = 0; i < nums.length; i++) {
+                length[i] = 1;
+            }
 
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[j] > nums[i]) {
-                    length[j] = Math.max(length[j], length[i] + 1);
+            for (int i = 0; i < nums.length; i++) {
+                for (int j = i + 1; j < nums.length; j++) {
+                    if (nums[j] > nums[i]) {
+                        length[j] = Math.max(length[j], length[i] + 1);
+                    }
                 }
             }
-        }
 
-        int maxLength = 0;
-        for (int i = 0; i < nums.length; i++) {
-            maxLength = Math.max(maxLength, length[i]);
-        }
+            int maxLength = 0;
+            for (int i = 0; i < nums.length; i++) {
+                maxLength = Math.max(maxLength, length[i]);
+            }
 
-        return maxLength;
+            return maxLength;
+        }
     }
 
     /**
-     * TODO improve it to O(n log n) time complexity
+     * TODO: improve it to O(n log n) time complexity
      * 
      * Time complexity: O(n log n)
      */
-    public int lengthOfLIS2(int[] nums) {
-        return 0;
+    class Solution2 {
+        public int lengthOfLIS(int[] nums) {
+            return 0;
+        }
     }
 
 }

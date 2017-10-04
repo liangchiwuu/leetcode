@@ -12,7 +12,7 @@ public class SingleNumber {
 
     public static void main(String[] args) {
         int[] nums = { 1, 2, 2, 1, 3, 4, 3 };
-        int result = new SingleNumber().singleNumber(nums);
+        int result = new SingleNumber().new Solution().singleNumber(nums);
         System.out.println(result);
     }
 
@@ -24,21 +24,23 @@ public class SingleNumber {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int singleNumber(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
-
-        HashSet<Integer> set = new HashSet<Integer>();
-        for (int e : nums) {
-            if (set.contains(e)) {
-                set.remove(e);
-            } else {
-                set.add(e);
+    class Solution {
+        public int singleNumber(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return -1;
             }
-        }
 
-        return set.iterator().next();
+            HashSet<Integer> set = new HashSet<Integer>();
+            for (int e : nums) {
+                if (set.contains(e)) {
+                    set.remove(e);
+                } else {
+                    set.add(e);
+                }
+            }
+
+            return set.iterator().next();
+        }
     }
 
     /**
@@ -47,17 +49,19 @@ public class SingleNumber {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int singleNumber2(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
+    class Solution2 {
+        public int singleNumber(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return -1;
+            }
 
-        int result = 0;
-        for (int e : nums) {
-            result ^= e;
-        }
+            int result = 0;
+            for (int e : nums) {
+                result ^= e;
+            }
 
-        return result;
+            return result;
+        }
     }
 
 }

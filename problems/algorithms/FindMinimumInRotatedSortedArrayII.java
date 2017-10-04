@@ -17,7 +17,7 @@ public class FindMinimumInRotatedSortedArrayII {
 
     public static void main(String[] args) {
         int[] nums = new int[] { 4, 4, 4, 0, 1, 2, 4 };
-        int result = new FindMinimumInRotatedSortedArrayII().findMin(nums);
+        int result = new FindMinimumInRotatedSortedArrayII().new Solution().findMin(nums);
         System.out.println(result);
     }
 
@@ -28,18 +28,20 @@ public class FindMinimumInRotatedSortedArrayII {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int findMin(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
-
-        int min = nums[0];
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] < min) {
-                min = nums[i];
+    class Solution {
+        public int findMin(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return -1;
             }
+
+            int min = nums[0];
+            for (int i = 0; i < nums.length - 1; i++) {
+                if (nums[i] < min) {
+                    min = nums[i];
+                }
+            }
+            return min;
         }
-        return min;
     }
 
     /**
@@ -49,30 +51,32 @@ public class FindMinimumInRotatedSortedArrayII {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public int findMin2(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
-
-        int start = 0;
-        int end = nums.length - 1;
-
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (nums[mid] == nums[end]) {
-                // if mid equals to end, it's fine to remove end without impact the smallest element
-                end--;
-            } else if (nums[mid] < nums[end]) {
-                end = mid;
-            } else {
-                start = mid;
+    class Solution2 {
+        public int findMin(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return -1;
             }
-        }
 
-        if (nums[start] < nums[end]) {
-            return nums[start];
-        } else {
-            return nums[end];
+            int start = 0;
+            int end = nums.length - 1;
+
+            while (start + 1 < end) {
+                int mid = start + (end - start) / 2;
+                if (nums[mid] == nums[end]) {
+                    // if mid equals to end, it's fine to remove end without impact the smallest element
+                    end--;
+                } else if (nums[mid] < nums[end]) {
+                    end = mid;
+                } else {
+                    start = mid;
+                }
+            }
+
+            if (nums[start] < nums[end]) {
+                return nums[start];
+            } else {
+                return nums[end];
+            }
         }
     }
 

@@ -55,7 +55,7 @@ public class BinaryTreePreorderTraversal {
         root.left.right = new TreeNode(5);
         root.right = new TreeNode(3);
 
-        List<Integer> result = new BinaryTreePreorderTraversal().preorderTraversal(root);
+        List<Integer> result = new BinaryTreePreorderTraversal().new Solution().preorderTraversal(root);
         System.out.println(result);
     }
 
@@ -65,17 +65,19 @@ public class BinaryTreePreorderTraversal {
      *
      * Time complexity: O(n)
      */
-    public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        if (root == null) {
+    class Solution {
+        public List<Integer> preorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            if (root == null) {
+                return result;
+            }
+
+            result.add(root.val);
+            result.addAll(preorderTraversal(root.left));
+            result.addAll(preorderTraversal(root.right));
+
             return result;
         }
-
-        result.add(root.val);
-        result.addAll(preorderTraversal(root.left));
-        result.addAll(preorderTraversal(root.right));
-
-        return result;
     }
 
     /**
@@ -83,20 +85,22 @@ public class BinaryTreePreorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> preorderTraversal2(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        traverse(root, result);
-        return result;
-    }
-
-    private void traverse(TreeNode root, List<Integer> result) {
-        if (root == null) {
-            return;
+    class Solution2 {
+        public List<Integer> preorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            traverse(root, result);
+            return result;
         }
 
-        result.add(root.val);
-        traverse(root.left, result);
-        traverse(root.right, result);
+        private void traverse(TreeNode root, List<Integer> result) {
+            if (root == null) {
+                return;
+            }
+
+            result.add(root.val);
+            traverse(root.left, result);
+            traverse(root.right, result);
+        }
     }
 
     /**
@@ -104,29 +108,31 @@ public class BinaryTreePreorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> preorderTraversal3(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        List<Integer> preorder = new LinkedList<Integer>();
+    class Solution3 {
+        public List<Integer> preorderTraversal(TreeNode root) {
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            List<Integer> preorder = new LinkedList<Integer>();
 
-        if (root == null) {
+            if (root == null) {
+                return preorder;
+            }
+
+            stack.push(root);
+            while (!stack.isEmpty()) {
+                TreeNode node = stack.pop();
+                preorder.add(node.val);
+
+                // we want to pop left first, since LIFO, right goes in first
+                if (node.right != null) {
+                    stack.push(node.right);
+                }
+                if (node.left != null) {
+                    stack.push(node.left);
+                }
+            }
+
             return preorder;
         }
-
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            preorder.add(node.val);
-
-            // we want to pop left first, since LIFO, right goes in first
-            if (node.right != null) {
-                stack.push(node.right);
-            }
-            if (node.left != null) {
-                stack.push(node.left);
-            }
-        }
-
-        return preorder;
     }
 
 }

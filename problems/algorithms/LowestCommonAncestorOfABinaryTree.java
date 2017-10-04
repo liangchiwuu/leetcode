@@ -49,7 +49,7 @@ public class LowestCommonAncestorOfABinaryTree {
         TreeNode p = root.left.left;
         TreeNode q = root.left.right;
 
-        TreeNode result = new LowestCommonAncestorOfABinaryTree().lowestCommonAncestor(root, p, q);
+        TreeNode result = new LowestCommonAncestorOfABinaryTree().new Solution().lowestCommonAncestor(root, p, q);
         if (result != null) {
             System.out.println(result.val);
         } else {
@@ -74,29 +74,31 @@ public class LowestCommonAncestorOfABinaryTree {
      * 
      * Time complexity: O(n)
      */
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null || root == p || root == q) {
-            return root;
-        }
+    class Solution {
+        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            if (root == null || root == p || root == q) {
+                return root;
+            }
 
-        TreeNode left = lowestCommonAncestor(root.left, q, p);
-        TreeNode right = lowestCommonAncestor(root.right, q, p);
+            TreeNode left = lowestCommonAncestor(root.left, q, p);
+            TreeNode right = lowestCommonAncestor(root.right, q, p);
 
-        // p and q are in different sub-tree -> root is LCA
-        if (left != null && right != null) {
-            return root;
-        }
+            // p and q are in different sub-tree -> root is LCA
+            if (left != null && right != null) {
+                return root;
+            }
 
-        // only found p/q in one side
-        if (left != null) {
-            return left;
-        }
-        if (right != null) {
-            return right;
-        }
+            // only found p/q in one side
+            if (left != null) {
+                return left;
+            }
+            if (right != null) {
+                return right;
+            }
 
-        // neither left nor right sub-tree contains p/q
-        return null;
+            // neither left nor right sub-tree contains p/q
+            return null;
+        }
     }
 
     /**
@@ -105,52 +107,54 @@ public class LowestCommonAncestorOfABinaryTree {
      * 
      * Time complexity: O(n)
      */
-    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
-        Result result = helper(root, p, q);
-        if (result.pExist && result.qExist) {
-            return result.node;
-        } else {
-            return null;
-        }
-    }
+    class Solution2 {
+        class Result {
+            boolean pExist;
+            boolean qExist;
+            TreeNode node;
 
-    class Result {
-        boolean pExist;
-        boolean qExist;
-        TreeNode node;
-
-        Result(boolean pExist, boolean qExist, TreeNode node) {
-            this.pExist = pExist;
-            this.qExist = qExist;
-            this.node = node;
-        }
-    }
-
-    private Result helper(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null) {
-            return new Result(false, false, null);
+            Result(boolean pExist, boolean qExist, TreeNode node) {
+                this.pExist = pExist;
+                this.qExist = qExist;
+                this.node = node;
+            }
         }
 
-        Result left = helper(root.left, p, q);
-        Result right = helper(root.right, p, q);
-
-        boolean pExist = left.pExist || right.pExist || root == p;
-        boolean qExist = left.qExist || right.qExist || root == q;
-
-        if (root == p || root == q) {
-            return new Result(pExist, qExist, root);
-        }
-        if (left.node != null && right.node != null) {
-            return new Result(pExist, qExist, root);
-        }
-        if (left.node != null) {
-            return new Result(pExist, qExist, left.node);
-        }
-        if (right.node != null) {
-            return new Result(pExist, qExist, right.node);
+        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            Result result = helper(root, p, q);
+            if (result.pExist && result.qExist) {
+                return result.node;
+            } else {
+                return null;
+            }
         }
 
-        return new Result(pExist, qExist, null);
+        private Result helper(TreeNode root, TreeNode p, TreeNode q) {
+            if (root == null) {
+                return new Result(false, false, null);
+            }
+
+            Result left = helper(root.left, p, q);
+            Result right = helper(root.right, p, q);
+
+            boolean pExist = left.pExist || right.pExist || root == p;
+            boolean qExist = left.qExist || right.qExist || root == q;
+
+            if (root == p || root == q) {
+                return new Result(pExist, qExist, root);
+            }
+            if (left.node != null && right.node != null) {
+                return new Result(pExist, qExist, root);
+            }
+            if (left.node != null) {
+                return new Result(pExist, qExist, left.node);
+            }
+            if (right.node != null) {
+                return new Result(pExist, qExist, right.node);
+            }
+
+            return new Result(pExist, qExist, null);
+        }
     }
 
 }

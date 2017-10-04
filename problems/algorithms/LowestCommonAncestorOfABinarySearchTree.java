@@ -38,7 +38,7 @@ public class LowestCommonAncestorOfABinarySearchTree {
         TreeNode p = root.left.left;
         TreeNode q = root.left.right;
 
-        TreeNode result = new LowestCommonAncestorOfABinarySearchTree().lowestCommonAncestor(root, p, q);
+        TreeNode result = new LowestCommonAncestorOfABinarySearchTree().new Solution().lowestCommonAncestor(root, p, q);
         if (result != null) {
             System.out.println(result.val);
         } else {
@@ -56,16 +56,18 @@ public class LowestCommonAncestorOfABinarySearchTree {
      * 
      * Time complexity: O(log n)
      */
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root.val > p.val && root.val > q.val) {
-            return lowestCommonAncestor(root.left, p, q);
-        }
+    class Solution {
+        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            if (root.val > p.val && root.val > q.val) {
+                return lowestCommonAncestor(root.left, p, q);
+            }
 
-        if (root.val < p.val && root.val < q.val) {
-            return lowestCommonAncestor(root.right, p, q);
-        }
+            if (root.val < p.val && root.val < q.val) {
+                return lowestCommonAncestor(root.right, p, q);
+            }
 
-        return root;
+            return root;
+        }
     }
 
     /**
@@ -77,12 +79,14 @@ public class LowestCommonAncestorOfABinarySearchTree {
      * 
      * Time complexity: O(log n)
      */
-    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
-        while ((root.val - p.val) * (root.val - q.val) > 0) {
-            root = p.val > root.val ? root.right : root.left;
-        }
+    class Solution2 {
+        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            while ((root.val - p.val) * (root.val - q.val) > 0) {
+                root = p.val > root.val ? root.right : root.left;
+            }
 
-        return root;
+            return root;
+        }
     }
 
 }

@@ -37,7 +37,7 @@ public class BinaryTreeInorderTraversal {
         root.left.right = new TreeNode(5);
         root.right = new TreeNode(3);
 
-        List<Integer> result = new BinaryTreeInorderTraversal().inorderTraversal(root);
+        List<Integer> result = new BinaryTreeInorderTraversal().new Solution().inorderTraversal(root);
         System.out.println(result);
     }
 
@@ -47,17 +47,19 @@ public class BinaryTreeInorderTraversal {
      *
      * Time complexity: O(n)
      */
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        if (root == null) {
+    class Solution {
+        public List<Integer> inorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            if (root == null) {
+                return result;
+            }
+
+            result.addAll(inorderTraversal(root.left));
+            result.add(root.val);
+            result.addAll(inorderTraversal(root.right));
+
             return result;
         }
-
-        result.addAll(inorderTraversal(root.left));
-        result.add(root.val);
-        result.addAll(inorderTraversal(root.right));
-
-        return result;
     }
 
     /**
@@ -65,20 +67,22 @@ public class BinaryTreeInorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> inorderTraversal2(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
-        traverse(root, result);
-        return result;
-    }
-
-    private void traverse(TreeNode root, List<Integer> result) {
-        if (root == null) {
-            return;
+    class Solution2 {
+        public List<Integer> inorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            traverse(root, result);
+            return result;
         }
 
-        traverse(root.left, result);
-        result.add(root.val);
-        traverse(root.right, result);
+        private void traverse(TreeNode root, List<Integer> result) {
+            if (root == null) {
+                return;
+            }
+
+            traverse(root.left, result);
+            result.add(root.val);
+            traverse(root.right, result);
+        }
     }
 
     /**
@@ -86,23 +90,25 @@ public class BinaryTreeInorderTraversal {
      * 
      * Time complexity: O(n)
      */
-    public List<Integer> inorderTraversal3(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        List<Integer> result = new LinkedList<Integer>();
-        TreeNode current = root;
+    class Solution3 {
+        public List<Integer> inorderTraversal(TreeNode root) {
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            List<Integer> result = new LinkedList<Integer>();
+            TreeNode current = root;
 
-        while (current != null || !stack.empty()) {
-            // find the bottom left node
-            while (current != null) {
-                stack.push(current);
-                current = current.left;
+            while (current != null || !stack.empty()) {
+                // find the bottom left node
+                while (current != null) {
+                    stack.push(current);
+                    current = current.left;
+                }
+
+                current = stack.pop();
+                result.add(current.val);
+                current = current.right;
             }
 
-            current = stack.pop();
-            result.add(current.val);
-            current = current.right;
+            return result;
         }
-
-        return result;
     }
 }
