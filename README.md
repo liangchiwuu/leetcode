@@ -7,8 +7,8 @@ LeetCode solutions in Java ☺!
 ★ indicates critical problems, IMO.  
 ☆ indicates LeetCode subscribers only.
 
-||#|Difficulty|Problem|Solution|Tag| 
-||-|----------|-------|--------|---|
+| |#|Difficulty|Problem|Solution|Tag| 
+|-|-|----------|-------|--------|---|
 |★|1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./problems/algorithms/TwoSum.java)|HashMap|
 ||2|Medium|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](./problems/algorithms/AddTwoNumbers.java)|Linked List|
 ||28|Easy|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[Java](./problems/algorithms/ImplementStrStr.java)|String|
