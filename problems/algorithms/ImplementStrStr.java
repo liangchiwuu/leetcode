@@ -38,7 +38,9 @@ public class ImplementStrStr {
     }
 
     /**
-     * Brute force solution, time complexity: worst case O(m*n)
+     * Brute force solution.
+     * 
+     * Time complexity: worst case O(m*n)
      */
     class Solution {
         public int strStr(String haystack, String needle) {
@@ -46,13 +48,16 @@ public class ImplementStrStr {
                 return -1;
             }
 
-            search: for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
-                for (int j = 0; j < needle.length(); j++) {
+            for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
+                int j;
+                for (j = 0; j < needle.length(); j++) {
                     if (haystack.charAt(i + j) != needle.charAt(j)) {
-                        continue search;
+                        break;
                     }
                 }
-                return i;
+                if (j == needle.length()) {
+                    return i;
+                }
             }
 
             return -1;
