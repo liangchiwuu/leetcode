@@ -135,4 +135,17 @@ public class BinaryTreePreorderTraversal {
         }
     }
 
+    /**
+     * TODO: Implement Morris Traversal.
+     * 
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     */
+    class Solution4 {
+        public List<Integer> preorderTraversal(TreeNode root) {
+            List<Integer> preorder = new LinkedList<Integer>();
+            return preorder;
+        }
+    }
+
 }

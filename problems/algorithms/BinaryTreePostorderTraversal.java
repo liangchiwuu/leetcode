@@ -210,4 +210,17 @@ public class BinaryTreePostorderTraversal {
             return result;
         }
     }
+
+    /**
+     * TODO: Implement Morris Traversal.
+     * 
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     */
+    class Solution6 {
+        public List<Integer> postorderTraversal(TreeNode root) {
+            List<Integer> result = new LinkedList<Integer>();
+            return result;
+        }
+    }
 }
