@@ -46,8 +46,9 @@ public class Subsets {
      * ...
      * 
      * Note: this works only when there is no duplicate in the given set.
+     * Note2: the time complexity is O(n 2^n) not O(2^n) because the time spend on each subset is not O(1) but O(n)
      * 
-     * Time complexity: O(2^n)
+     * Time complexity: O(n 2^n)
      */
     class Solution {
         public List<List<Integer>> subsets(int[] nums) {
@@ -87,7 +88,7 @@ public class Subsets {
      * 
      * The idea is to start the search from an offset index and only look afterwards.
      * 
-     * Time complexity: O(2^n)
+     * Time complexity: O(n 2^n)
      */
     class Solution2 {
         public List<List<Integer>> subsets(int[] nums) {
@@ -111,7 +112,7 @@ public class Subsets {
         /*
          * Three key element of recursion:
          * 
-         * 1. definition of recursion: finds all sets that start with 'subset' and add into 'results.'
+         * 1. definition of recursion: finds all sets that start with 'subset' and add into 'results'
          */
         private void helper(List<Integer> subset, int[] nums, int offset, List<List<Integer>> results) {
             results.add(new ArrayList<Integer>(subset));
@@ -132,8 +133,8 @@ public class Subsets {
     }
 
     /**
-     * A solution use bit manipulation. The idea is that, we can represent any subset of an array of length n by a n-bit
-     * decimal number. Each digit in this decimal number indicates the existence of nth element.
+     * A solution use bit manipulation. The idea is that, any subset of an array of length n can be represented by a
+     * n-bit decimal number. Each digit in this decimal number indicates the existence of nth element.
      * 
      * For instance, for input [1, 2, 3]:
      * 000 -> []
@@ -142,7 +143,7 @@ public class Subsets {
      * 011 -> [2, 3]
      * ...
      * 
-     * Time complexity: O(2^n)
+     * Time complexity: O(n 2^n)
      */
     class Solution3 {
         public List<List<Integer>> subsets(int[] nums) {
