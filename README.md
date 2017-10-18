@@ -36,6 +36,7 @@ LeetCode solutions in Java ☺!
 |★|236|Medium|[Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[Java](./problems/algorithms/LowestCommonAncestorOfABinaryTree.java)|Binary Tree, Divide and Conquer|
 ||257|Easy|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[Java](./problems/algorithms/BinaryTreePaths.java)|Binary Tree, Divide and Conquer|
 |★|260|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./problems/algorithms/SingleNumberIII.java)|Bit Manipulation|
+|★☆|261|Medium|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)|[Java](./problems/algorithms/GraphValidTree.java)|BFS, DFS, Union-Find|
 ||278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./problems/algorithms/FirstBadVersion.java)|Binary Search|
 |★|297|Hard|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[Java](./problems/algorithms/SerializeAndDeserializeBinaryTree.java)|Binary Tree, BFS, DFS|
 ||300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./problems/algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
