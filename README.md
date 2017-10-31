@@ -24,6 +24,7 @@ LeetCode solutions in Java ☺!
 ||104|Easy|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|[Java](./problems/algorithms/MaximumDepthOfBinaryTree.java)|Binary Tree, Divide and Conquer|
 ||110|Easy|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[Java](./problems/algorithms/BalancedBinaryTree.java)|Binary Tree, Divide and Conquer|
 |★|114|Medium|[Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[Java](./problems/algorithms/FlattenBinaryTreeToLinkedList.java)|Binary Tree, Divide and Conquer|
+||133|Medium|[Clone Graph](https://leetcode.com/problems/clone-graph/)|[Java](./problems/algorithms/CloneGraph.java)|BFS, DFS|
 ||136|Easy|[Single Number](https://leetcode.com/problems/single-number/)|[Java](./problems/algorithms/SingleNumber.java)|Bit Manipulation|
 |★|137|Medium|[Single Number II](https://leetcode.com/problems/single-number-ii/)|[Java](./problems/algorithms/SingleNumberII.java)|Bit Manipulation|
 ||144|Medium|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[Java](./problems/algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer|
