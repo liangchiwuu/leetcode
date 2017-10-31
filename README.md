@@ -1,5 +1,7 @@
 # LeetCode
 
+[![License](https://img.shields.io/badge/license-GPL-brightgreen.svg)](./LICENSE.md) ![Language](https://img.shields.io/badge/language-Java-blue.svg)
+
 LeetCode solutions in Java ☺!
 
 ## Algorithms
