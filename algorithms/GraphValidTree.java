@@ -46,7 +46,7 @@ public class GraphValidTree {
      * A BFS solution. The idea is to first check the # of edges, then do a BFS from node 0 (root). If all the nodes are
      * accessible from node 0, which implies the graph is connected, then this is a valid tree.
      * 
-     * Time complexity: O(V * E), when there are V vertices and E edges
+     * Time complexity: O(V + E), when there are V vertices and E edges
      */
     public class Solution {
         public boolean validTree(int n, int[][] edges) {
@@ -96,7 +96,7 @@ public class GraphValidTree {
      * A DFS solution. The idea is basically the same as BFS. One optimization we use here (not necessarily) is to check
      * cycles while performing DFS. If we happened to find a cycle, then we can return the result right away.
      * 
-     * Time complexity: O(V * E), when there are V vertices and E edges
+     * Time complexity: O(V + E), when there are V vertices and E edges
      */
     public class Solution2 {
         public boolean validTree(int n, int[][] edges) {
@@ -147,7 +147,7 @@ public class GraphValidTree {
      * A simple Union-Find solution. Note that this easy version of Union-Find uses an array of size n to represent
      * parents, so it will only work when the nodes are continuous.
      * 
-     * Time complexity: O(V * E), when there are V vertices and E edges
+     * Time complexity: O(V + E), when there are V vertices and E edges
      */
     public class Solution3 {
         public boolean validTree(int n, int[][] edges) {
@@ -190,7 +190,7 @@ public class GraphValidTree {
      * UnionFind class which is capable of handle non-continuous nodes. Also, the compress step in compressedFind()
      * method is not necessary, but acts as an optimization to improve performance.
      * 
-     * Time complexity: O(V * E), when there are V vertices and E edges
+     * Time complexity: O(V + E), when there are V vertices and E edges
      */
     public class Solution4 {
         class UnionFind {

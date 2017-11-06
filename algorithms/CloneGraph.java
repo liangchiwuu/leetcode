@@ -60,7 +60,7 @@ public class CloneGraph {
      * 
      * Once these sub-problems are defined, it is easy to implement them one by one.
      * 
-     * Time complexity: O(V * E) for V vertices and E edges
+     * Time complexity: O(V + E) for V vertices and E edges
      */
     public class Solution {
         public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
@@ -115,7 +115,7 @@ public class CloneGraph {
     /**
      * A recursive DFS solution.
      * 
-     * Time complexity: O(V * E) for V vertices and E edges
+     * Time complexity: O(V + E) for V vertices and E edges
      */
     public class Solution2 {
         private HashMap<Integer, UndirectedGraphNode> map = new HashMap<>();
