@@ -50,7 +50,7 @@ public class CourseSchedule {
      * 5. check if the topological sorting contains all courses
      * 
      * Note that this solution is relatively long since every task is divided into separate functions. You can
-     * easily squash the code by putting everything in the main function, but it will be less readable.
+     * easily squash the code by putting everything in one function, but it will be less readable.
      * 
      * Time complexity: O(V + E)
      */
@@ -83,7 +83,6 @@ public class CourseSchedule {
             for (int node : graph.keySet()) {
                 for (int neighbor : graph.get(node)) {
                     indegree.put(neighbor, indegree.get(neighbor) + 1);
-
                 }
             }
             return indegree;
@@ -105,11 +104,11 @@ public class CourseSchedule {
             Queue<Integer> queue = new LinkedList<>(startNodes);
             while (!queue.isEmpty()) {
                 int node = queue.poll();
-                for (int neightbor : graph.get(node)) {
-                    indegree.put(neightbor, indegree.get(neightbor) - 1);
-                    if (indegree.get(neightbor) == 0) {
-                        topSort.add(neightbor);
-                        queue.offer(neightbor);
+                for (int neighbor : graph.get(node)) {
+                    indegree.put(neighbor, indegree.get(neighbor) - 1);
+                    if (indegree.get(neighbor) == 0) {
+                        topSort.add(neighbor);
+                        queue.offer(neighbor);
                     }
                 }
             }
