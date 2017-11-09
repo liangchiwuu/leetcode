@@ -46,5 +46,6 @@ LeetCode solutions in Java ☺!
 ||278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 |★|297|Hard|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|Binary Tree, BFS, DFS|
 ||300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
+|☆|317|Hard|[Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/)|[Java](./algorithms/ShortestDistanceFromAllBuildings.java)|BFS|
 ||344|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/)|[Java](./algorithms/ReverseString.java)|String|
 |★☆|444|Medium|[Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/)|[Java](./algorithms/SequenceReconstruction.java)|BFS|
