@@ -41,7 +41,11 @@ public class CombinationSum {
      * 3. the exit of recursion: the point to stop and return, here we should end the search when remain target equals
      * to zero.
      * 
-     * Time complexity:
+     * Time complexity: O(# of solutions * time complexity for each solution). # of solutions is at most # of subsets
+     * which is 2^n. Time complexity for each solution is greatly determined by target, for instance, it takes at least
+     * 1000 loops if given candidates [1] and target 1000. Some discussions:
+     * http://www.1point3acres.com/bbs/thread-117602-1-1.html
+     * https://discuss.leetcode.com/topic/25900/if-asked-to-discuss-the-time-complexity-of-your-solution-what-would-you-say
      */
     class Solution {
         public List<List<Integer>> combinationSum(int[] candidates, int target) {
