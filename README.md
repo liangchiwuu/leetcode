@@ -18,7 +18,8 @@ LeetCode solutions in Java ☺!
 |★|33|Medium|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[Java](./algorithms/SearchInRotatedSortedArray.java)|Binary Search|
 ||34|Medium|[Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[Java](./algorithms/SearchForARange.java)|Binary Search, Divide and Conquer|
 ||35|Easy|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[Java](./algorithms/SearchInsertPosition.java)|Binary Search|
-|★|39|Medium|[Combination Sum](https://leetcode.com/problems/combination-sum/)|[Java](./algorithms/CombinationSum.java)|DFS|
+||39|Medium|[Combination Sum](https://leetcode.com/problems/combination-sum/)|[Java](./algorithms/CombinationSum.java)|DFS|
+|★|40|Medium|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[Java](./algorithms/CombinationSumII.java)|DFS|
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|
 |★|81|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./algorithms/SearchInRotatedSortedArrayII.java)|Binary Search|
