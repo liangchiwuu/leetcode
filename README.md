@@ -22,6 +22,7 @@ LeetCode solutions in Java ☺!
 |★|40|Medium|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[Java](./algorithms/CombinationSumII.java)|DFS|
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|
+||90|Medium|[Subsets II](https://leetcode.com/problems/subsets-ii/)|[Java](./algorithms/SubsetsII.java)|DFS|
 |★|81|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./algorithms/SearchInRotatedSortedArrayII.java)|Binary Search|
 |★|94|Medium|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[Java](./algorithms/BinaryTreeInorderTraversal.java)|Binary Tree, Divide and Conquer|
 ||98|Medium|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|[Java](./algorithms/ValidateBinarySearchTree.java)|Binary Tree, Divide and Conquer|
