@@ -49,7 +49,7 @@ public class PalindromePartitioning {
 
         private void dfs(String s, int startIndex, List<String> partition, List<List<String>> results) {
             if (startIndex == s.length()) {
-                results.add(partition);
+                results.add(new ArrayList<>(partition));
             }
 
             for (int i = startIndex; i < s.length(); i++) {
