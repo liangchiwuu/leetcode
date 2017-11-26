@@ -24,7 +24,7 @@ public class Permutations {
 
     public static void main(String[] args) {
         int[] nums = { 1, 2, 3 };
-        List<List<Integer>> permutations = new Permutations().new Solution2().permute(nums);
+        List<List<Integer>> permutations = new Permutations().new Solution().permute(nums);
         System.out.println(permutations);
     }
 
