@@ -20,8 +20,8 @@ LeetCode solutions in Java ☺!
 ||35|Easy|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[Java](./algorithms/SearchInsertPosition.java)|Binary Search|
 ||39|Medium|[Combination Sum](https://leetcode.com/problems/combination-sum/)|[Java](./algorithms/CombinationSum.java)|DFS|
 |★|40|Medium|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[Java](./algorithms/CombinationSumII.java)|DFS|
-||46|Medium|[Permutations](https://leetcode.com/problems/permutations/)|[Java](./algorithms/Permutations.java)|DFS|
-||47|Medium|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[Java](./algorithms/PermutationsII.java)|BFS, DFS|
+||46|Medium|[Permutations](https://leetcode.com/problems/permutations/)|[Java](./algorithms/Permutations.java)|BFS, DFS|
+||47|Medium|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[Java](./algorithms/PermutationsII.java)|DFS|
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|
 ||90|Medium|[Subsets II](https://leetcode.com/problems/subsets-ii/)|[Java](./algorithms/SubsetsII.java)|DFS|
