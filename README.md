@@ -22,6 +22,7 @@ LeetCode solutions in Java ☺!
 |★|40|Medium|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[Java](./algorithms/CombinationSumII.java)|DFS|
 ||46|Medium|[Permutations](https://leetcode.com/problems/permutations/)|[Java](./algorithms/Permutations.java)|BFS, DFS|
 ||47|Medium|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[Java](./algorithms/PermutationsII.java)|DFS|
+|★|51|Hard|[N-Queens](https://leetcode.com/problems/n-queens/)|[Java](./algorithms/NQueens.java)|DFS|
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|
 ||90|Medium|[Subsets II](https://leetcode.com/problems/subsets-ii/)|[Java](./algorithms/SubsetsII.java)|DFS|
