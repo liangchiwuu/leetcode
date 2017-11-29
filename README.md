@@ -45,6 +45,7 @@ LeetCode solutions in Java ☺!
 ||154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|
 ||162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./algorithms/FindPeakElement.java)|Binary Search|
 ||200|Medium|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|[Java](./algorithms/NumberOfIslands.java)|BFS, DFS, Union-Find|
+|★|206|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[Java](./algorithms/ReverseLinkedList.java)|Linked List|
 ||207|Medium|[Course Schedule](https://leetcode.com/problems/course-schedule/)|[Java](./algorithms/CourseSchedule.java)|BFS|
 ||210|Medium|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./algorithms/CourseScheduleII.java)|BFS|
 ||235|Easy|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|[Java](./algorithms/LowestCommonAncestorOfABinarySearchTree.java)|Binary Tree|
