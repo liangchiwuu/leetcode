@@ -18,8 +18,14 @@ public class ReverseLinkedList {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
+
         ListNode reversed = new ReverseLinkedList().new Solution().reverseList(head);
-        System.out.println(reversed.val);
+        while (reversed != null) {
+            System.out.print(reversed.val);
+            System.out.print("->");
+            reversed = reversed.next;
+        }
+        System.out.println("null");
     }
 
     /**
@@ -44,7 +50,8 @@ public class ReverseLinkedList {
     }
 
     /**
-     * An recursive solution.
+     * A recursive solution. This is NOT recommended since a linked list can easily be very long and causes stack
+     * overflow.
      * 
      * Time complexity: O(n)
      */
