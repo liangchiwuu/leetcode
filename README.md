@@ -14,6 +14,7 @@ LeetCode solutions in Java ☺!
 |-|-|----------|-------|--------|---|
 |★|1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|HashMap|
 ||2|Medium|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](./algorithms/AddTwoNumbers.java)|Linked List|
+||21|Easy|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[Java](./algorithms/MergeTwoSortedLists.java)|Linked List|
 |★|25|Hard|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[Java](./algorithms/ReverseNodesInKGroup.java)|Linked List|
 ||28|Easy|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[Java](./algorithms/ImplementStrStr.java)|String|
 |★|33|Medium|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[Java](./algorithms/SearchInRotatedSortedArray.java)|Binary Search|
