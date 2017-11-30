@@ -14,6 +14,7 @@ LeetCode solutions in Java ☺!
 |-|-|----------|-------|--------|---|
 |★|1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|HashMap|
 ||2|Medium|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](./algorithms/AddTwoNumbers.java)|Linked List|
+|★|25|Hard|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[Java](./algorithms/ReverseNodesInKGroup.java)|Linked List|
 ||28|Easy|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[Java](./algorithms/ImplementStrStr.java)|String|
 |★|33|Medium|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[Java](./algorithms/SearchInRotatedSortedArray.java)|Binary Search|
 ||34|Medium|[Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[Java](./algorithms/SearchForARange.java)|Binary Search, Divide and Conquer|
@@ -45,7 +46,7 @@ LeetCode solutions in Java ☺!
 ||154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|
 ||162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./algorithms/FindPeakElement.java)|Binary Search|
 ||200|Medium|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|[Java](./algorithms/NumberOfIslands.java)|BFS, DFS, Union-Find|
-|★|206|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[Java](./algorithms/ReverseLinkedList.java)|Linked List|
+||206|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[Java](./algorithms/ReverseLinkedList.java)|Linked List|
 ||207|Medium|[Course Schedule](https://leetcode.com/problems/course-schedule/)|[Java](./algorithms/CourseSchedule.java)|BFS|
 ||210|Medium|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./algorithms/CourseScheduleII.java)|BFS|
 ||235|Easy|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|[Java](./algorithms/LowestCommonAncestorOfABinarySearchTree.java)|Binary Tree|
