@@ -41,6 +41,7 @@ LeetCode solutions in Java ☺!
 ||133|Medium|[Clone Graph](https://leetcode.com/problems/clone-graph/)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
 ||136|Easy|[Single Number](https://leetcode.com/problems/single-number/)|[Java](./algorithms/SingleNumber.java)|Bit Manipulation|
 |★|137|Medium|[Single Number II](https://leetcode.com/problems/single-number-ii/)|[Java](./algorithms/SingleNumberII.java)|Bit Manipulation|
+|★|138|Medium|[Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)|[Java](./algorithms/CopyListWithRandomPointer.java)|Linked List|
 ||144|Medium|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer|
 |★|145|Hard|[Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)|[Java](./algorithms/BinaryTreePostorderTraversal.java)|Binary Tree, Divide and Conquer|
 ||153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|
