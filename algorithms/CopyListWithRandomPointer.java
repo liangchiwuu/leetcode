@@ -18,7 +18,7 @@ public class CopyListWithRandomPointer {
         RandomListNode(int x) {
             this.label = x;
         }
-    };
+    }
 
     public static void main(String[] args) {
         RandomListNode n1 = new RandomListNode(1);
