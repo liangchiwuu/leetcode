@@ -46,6 +46,7 @@ LeetCode solutions in Java ☺!
 ||142|Medium|[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[Java](./algorithms/LinkedListCycleII.java)|Linked List, Two Pointers|
 ||144|Medium|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer|
 |★|145|Hard|[Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)|[Java](./algorithms/BinaryTreePostorderTraversal.java)|Binary Tree, Divide and Conquer|
+|★|148|Medium|[Sort List](https://leetcode.com/problems/sort-list/)|[Java](./algorithms/SortList.java)|Linked List|
 ||153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|
 ||154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|
 ||162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./algorithms/FindPeakElement.java)|Binary Search|
