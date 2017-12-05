@@ -65,4 +65,5 @@ LeetCode solutions in Java ☺!
 ||300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
 |☆|317|Hard|[Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/)|[Java](./algorithms/ShortestDistanceFromAllBuildings.java)|BFS|
 ||344|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/)|[Java](./algorithms/ReverseString.java)|String|
+||349|Easy|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)|[Java](./algorithms/IntersectionOfTwoArrays.java)|Array, Binary Search, Two Pointers|
 |★☆|444|Medium|[Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/)|[Java](./algorithms/SequenceReconstruction.java)|BFS|
