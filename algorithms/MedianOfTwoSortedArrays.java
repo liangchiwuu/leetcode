@@ -92,7 +92,7 @@ public class MedianOfTwoSortedArrays {
                 return Math.min(a[aHead], b[bHead]);
             }
 
-            // if an array has less than k/2 elements, assign max value so we can drop another array
+            // if has less than k/2 elements, assign max value so we can drop from another
             int aKey = aHead + k / 2 - 1 < a.length ? a[aHead + k / 2 - 1] : Integer.MAX_VALUE;
             int bKey = bHead + k / 2 - 1 < b.length ? b[bHead + k / 2 - 1] : Integer.MAX_VALUE;
 
