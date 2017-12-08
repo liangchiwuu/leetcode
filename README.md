@@ -12,7 +12,7 @@ LeetCode solutions in Java ☺!
 
 | |#|Difficulty|Problem|Solution|Tag| 
 |-|-|----------|-------|--------|---|
-|★|1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|HashMap|
+|★|1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
 ||2|Medium|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](./algorithms/AddTwoNumbers.java)|Linked List|
 |★|4|Hard|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|[Java](./algorithms/MedianOfTwoSortedArrays.java)|Array|
 ||21|Easy|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[Java](./algorithms/MergeTwoSortedLists.java)|Linked List|
@@ -70,3 +70,4 @@ LeetCode solutions in Java ☺!
 ||344|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/)|[Java](./algorithms/ReverseString.java)|String|
 ||349|Easy|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)|[Java](./algorithms/IntersectionOfTwoArrays.java)|Array, Binary Search, Two Pointers|
 |★☆|444|Medium|[Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/)|[Java](./algorithms/SequenceReconstruction.java)|BFS|
+||560|Medium|[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[Java](./algorithms/SubarraySumEqualsK.java)|Array, Hash|
