@@ -28,6 +28,10 @@ public class MaximumSubarray {
      */
     class Solution {
         public int maxSubArray(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return 0;
+            }
+
             int max = Integer.MIN_VALUE;
             int sum = 0;
 
@@ -35,6 +39,33 @@ public class MaximumSubarray {
                 sum += nums[i];
                 max = Math.max(max, sum);
                 sum = Math.max(sum, 0);
+            }
+
+            return max;
+        }
+    }
+
+    /**
+     * An implementation using prefix sum. Define PrefixSum[i] = A[0] + A[1] + ... + A[i - 1], PrefixSum[0] = 0. We can
+     * easily see that Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]. This means that, in order to find the maximum
+     * Sum(i~j) for given j, we need to first know the minimum PrefixSum[i] for all i < j.
+     * 
+     * Time complexity: O(n)
+     */
+    class Solution2 {
+        public int maxSubArray(int[] nums) {
+            if (nums == null || nums.length == 0) {
+                return 0;
+            }
+
+            int max = Integer.MIN_VALUE;
+            int sum = 0;
+            int minSum = 0;
+
+            for (int i = 0; i < nums.length; i++) {
+                sum += nums[i];
+                max = Math.max(max, sum - minSum);
+                minSum = Math.min(sum, minSum);
             }
 
             return max;

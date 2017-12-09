@@ -26,7 +26,7 @@ LeetCode solutions in Java ☺!
 ||46|Medium|[Permutations](https://leetcode.com/problems/permutations/)|[Java](./algorithms/Permutations.java)|BFS, DFS|
 ||47|Medium|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[Java](./algorithms/PermutationsII.java)|DFS|
 |★|51|Hard|[N-Queens](https://leetcode.com/problems/n-queens/)|[Java](./algorithms/NQueens.java)|DFS|
-||53|Easy|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Java](./algorithms/MaximumSubarray.java)|Array|
+|★|53|Easy|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Java](./algorithms/MaximumSubarray.java)|Array|
 ||69|Easy|[Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Java](./algorithms/SqrtX.java)|Binary Search|
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|
