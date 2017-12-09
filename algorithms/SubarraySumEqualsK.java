@@ -52,9 +52,10 @@ public class SubarraySumEqualsK {
     }
 
     /**
-     * A solution with HashMap. We know the key to solve this problem is to check the sum of subarrays, in other words,
-     * check all sum(start, end). And this can be easily obtained if we know sum(0, start-1) and sum(0, end). To achieve
-     * this, we just need to use a HashMap to store all previous sums and how many times they have appeared.
+     * A solution with HashMap and prefix sum. Define PrefixSum[i] = A[0] + A[1] + ... + A[i - 1], PrefixSum[0] = 0. We
+     * can easily see that Sum(i~j) = PrefixSum[j + 1] - PrefixSum[i]. This means that, if Sum(i~j) equals to K for
+     * given j, PrefixSum[j + 1] - PrefixSum[i] must also equals to K. So for a certain j, we need to use a HashMap to
+     * store all previous PrefixSum[i] and also how many times they have appeared.
      * 
      * Time complexity: O(n)
      * Space complexity: O(n)
