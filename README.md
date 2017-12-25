@@ -74,3 +74,4 @@ LeetCode solutions in Java ☺!
 |★☆|444|Medium|[Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/)|[Java](./algorithms/SequenceReconstruction.java)|BFS|
 ||560|Medium|[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[Java](./algorithms/SubarraySumEqualsK.java)|Array, Hash|
 ||747|Easy|[Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/)|[Java](./algorithms/LargestNumberGreaterThanTwiceOfOthers.java)|Array|
+||752|Medium|[Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./algorithms/OpenTheLock.java)|BFS|
