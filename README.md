@@ -66,6 +66,7 @@ LeetCode solutions in Java ☺!
 |★|260|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./algorithms/SingleNumberIII.java)|Bit Manipulation|
 |★☆|261|Medium|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union-Find|
 ||278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
+||283|Easy|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Java](./algorithms/MoveZeroes.java)|Two Pointers|
 |★|297|Hard|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|Binary Tree, BFS, DFS|
 ||300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
 |☆|317|Hard|[Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/)|[Java](./algorithms/ShortestDistanceFromAllBuildings.java)|BFS|
