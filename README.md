@@ -40,6 +40,7 @@ LeetCode solutions in Java ☺!
 ||104|Easy|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|[Java](./algorithms/MaximumDepthOfBinaryTree.java)|Binary Tree, Divide and Conquer|
 ||110|Easy|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[Java](./algorithms/BalancedBinaryTree.java)|Binary Tree, Divide and Conquer|
 |★|114|Medium|[Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[Java](./algorithms/FlattenBinaryTreeToLinkedList.java)|Binary Tree, Divide and Conquer|
+||125|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 |★|126|Hard|[Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[Java](./algorithms/WordLadderII.java)|BFS, DFS|
 ||127|Medium|[Word Ladder](https://leetcode.com/problems/word-ladder/)|[Java](./algorithms/WordLadder.java)|BFS|
 |★|131|Medium|[Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[Java](./algorithms/PalindromePartitioning.java)|DFS|
