@@ -28,7 +28,9 @@ public class TwoSum {
      */
     class Solution {
         public int[] twoSum(int[] nums, int target) {
-            int[] result = new int[2];
+            if (nums == null || nums.length < 2) {
+                return null;
+            }
 
             for (int i = 0; i < nums.length; i++) {
                 int j = i + 1;
@@ -40,7 +42,7 @@ public class TwoSum {
                 }
             }
 
-            return result;
+            return null;
         }
     }
 
@@ -52,6 +54,10 @@ public class TwoSum {
      */
     class Solution2 {
         public int[] twoSum(int[] nums, int target) {
+            if (nums == null || nums.length < 2) {
+                return null;
+            }
+
             HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 
             for (int i = 0; i < nums.length; i++) {
@@ -62,7 +68,7 @@ public class TwoSum {
                 map.put(nums[i], i);
             }
 
-            return new int[2];
+            return null;
         }
     }
 
