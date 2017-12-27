@@ -22,18 +22,17 @@ public class TwoSum {
     }
 
     /**
-     * Use double loop to step through.
+     * A brute force solution. Simply loop through every possibilities..
      * 
      * Time complexity: O(n^2)
      */
     class Solution {
         public int[] twoSum(int[] nums, int target) {
             int[] result = new int[2];
-            int length = nums.length;
 
-            for (int i = 0; i < length; i++) {
+            for (int i = 0; i < nums.length; i++) {
                 int j = i + 1;
-                while (j < length) {
+                while (j < nums.length) {
                     if (nums[i] + nums[j] == target) {
                         return new int[] { i, j };
                     }
@@ -46,30 +45,24 @@ public class TwoSum {
     }
 
     /**
-     * Use a HashMap to store the values, then matching the difference.
-     * Getting a value from a HashMap is usually O(1) while no collision.
+     * Use a HashMap to store the values, then matching the difference. Getting a value from a HashMap is usually O(1)
+     * without collision.
      * 
      * Time complexity: O(n)
      */
     class Solution2 {
         public int[] twoSum(int[] nums, int target) {
-            int i = 0;
-            int j = 0;
-            int length = nums.length;
             HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-            for (int k = 0; k < length; k++) {
-                int diff = target - nums[k];
+            for (int i = 0; i < nums.length; i++) {
+                int diff = target - nums[i];
                 if (map.containsKey(diff)) {
-                    i = k;
-                    j = map.get(diff);
-                    break;
-                } else {
-                    map.put(nums[k], k);
+                    return new int[] { i, map.get(diff) };
                 }
+                map.put(nums[i], i);
             }
 
-            return new int[] { i, j };
+            return new int[2];
         }
     }
 
