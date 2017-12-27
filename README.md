@@ -15,6 +15,7 @@ LeetCode solutions in Java ☺!
 |★|1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
 ||2|Medium|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](./algorithms/AddTwoNumbers.java)|Linked List|
 |★|4|Hard|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|[Java](./algorithms/MedianOfTwoSortedArrays.java)|Array|
+|★|15|Medium|[3Sum](https://leetcode.com/problems/3sum/)|[Java](./algorithms/ThreeSum.java)|Two Pointers|
 ||21|Easy|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[Java](./algorithms/MergeTwoSortedLists.java)|Linked List|
 |★|25|Hard|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[Java](./algorithms/ReverseNodesInKGroup.java)|Linked List|
 ||26|Easy|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[Java](./algorithms/RemoveDuplicatesFromSortedArray.java)|Two Pointers|
