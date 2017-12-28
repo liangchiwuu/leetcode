@@ -56,7 +56,7 @@ public class ValidTriangleNumber {
 
             while (left < right) {
                 if (nums[left] + nums[right] > longestEdge) {
-                    // any edges in [left, right) plus right will form a triangle, creating (right - left) triangles
+                    // any edges in [left, right) can form a triangle with right, creating (right - left) triangles
                     count += (right - left);
                     right--;
                 } else {
