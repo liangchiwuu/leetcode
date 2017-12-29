@@ -31,6 +31,7 @@ LeetCode solutions in Java ☺!
 |★|53|Easy|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Java](./algorithms/MaximumSubarray.java)|Array|
 ||69|Easy|[Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Java](./algorithms/SqrtX.java)|Binary Search|
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|
+|★|75|Medium|[Sort Colors](https://leetcode.com/problems/sort-colors/)|[Java](./algorithms/SortColors.java)|Array, Two Pointers|
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|
 ||90|Medium|[Subsets II](https://leetcode.com/problems/subsets-ii/)|[Java](./algorithms/SubsetsII.java)|DFS|
 |★|81|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./algorithms/SearchInRotatedSortedArrayII.java)|Binary Search|
