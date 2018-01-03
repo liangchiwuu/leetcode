@@ -8,23 +8,23 @@ import java.util.Stack;
  * For example,
  * Given
  * 
- *     1
- *    / \
- *   2   5
- *  / \   \
- * 3   4   6
+ * 1
+ * / \
+ * 2 5
+ * / \ \
+ * 3 4 6
  * The flattened tree should look like:
  * 1
- *  \
- *   2
- *    \
- *     3
- *      \
- *       4
- *        \
- *         5
- *          \
- *           6
+ * \
+ * 2
+ * \
+ * 3
+ * \
+ * 4
+ * \
+ * 5
+ * \
+ * 6
  */
 public class FlattenBinaryTreeToLinkedList {
 
@@ -93,6 +93,35 @@ public class FlattenBinaryTreeToLinkedList {
     }
 
     /**
+     * Another divide & conquer solution. It's similar to the previous one without returning a node.
+     * 
+     * Time complexity: O(n)
+     */
+    public class Solution2 {
+        public void flatten(TreeNode root) {
+            if (root == null) {
+                return;
+            }
+
+            flatten(root.left);
+            flatten(root.right);
+
+            if (root.left == null) {
+                return;
+            }
+
+            TreeNode leftLast = root.left;
+            while (leftLast.right != null) {
+                leftLast = leftLast.right;
+            }
+
+            leftLast.right = root.right;
+            root.right = root.left;
+            root.left = null;
+        }
+    }
+
+    /**
      * A recursive solution. The key is to make a copy of the root of right subtree, since the left subtree will switch
      * to right after flatten. We also need to keep track of the last node. Whenever the last node exists, the current
      * node should be at the right side of it.
@@ -101,7 +130,7 @@ public class FlattenBinaryTreeToLinkedList {
      * 
      * Time complexity: O(n)
      */
-    class Solution2 {
+    class Solution3 {
         private TreeNode lastNode = null;
 
         public void flatten(TreeNode root) {
@@ -126,7 +155,7 @@ public class FlattenBinaryTreeToLinkedList {
      * 
      * Time complexity: O(n)
      */
-    class Solution3 {
+    class Solution4 {
         public void flatten(TreeNode root) {
             if (root == null) {
                 return;
