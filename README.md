@@ -54,7 +54,7 @@ LeetCode solutions in Java ☺!
 ||142|Medium|[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[Java](./algorithms/LinkedListCycleII.java)|Linked List, Two Pointers|
 ||144|Medium|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer|
 |★|145|Hard|[Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)|[Java](./algorithms/BinaryTreePostorderTraversal.java)|Binary Tree, Divide and Conquer|
-||146|Hard|[LRU Cache](https://leetcode.com/problems/lru-cache/)|[Java](./algorithms/LRUCache.java)|Hash, Linked List|
+|★|146|Hard|[LRU Cache](https://leetcode.com/problems/lru-cache/)|[Java](./algorithms/LRUCache.java)|Hash, Linked List|
 |★|148|Medium|[Sort List](https://leetcode.com/problems/sort-list/)|[Java](./algorithms/SortList.java)|Divide and Conquer, Linked List|
 ||153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|
 ||154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|
@@ -71,6 +71,7 @@ LeetCode solutions in Java ☺!
 ||257|Easy|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[Java](./algorithms/BinaryTreePaths.java)|Binary Tree, Divide and Conquer|
 |★|260|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./algorithms/SingleNumberIII.java)|Bit Manipulation|
 |★☆|261|Medium|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union-Find|
+||263|Easy|[Ugly Number](https://leetcode.com/problems/ugly-number/)|[Java](./algorithms/UglyNumber.java)||
 ||278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 ||283|Easy|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Java](./algorithms/MoveZeroes.java)|Two Pointers|
 |★|297|Hard|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|Binary Tree, BFS, DFS|
