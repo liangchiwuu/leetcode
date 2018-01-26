@@ -43,10 +43,10 @@ public class KthLargestElementInAnArray {
             int j = end;
             int pivot = nums[(start + end) / 2];
             while (i <= j) {
-                while (start <= end && nums[i] > pivot) {
+                while (nums[i] > pivot) {
                     i++;
                 }
-                while (start <= end && nums[j] < pivot) {
+                while (nums[j] < pivot) {
                     j--;
                 }
                 if (i <= j) {
