@@ -72,6 +72,7 @@ LeetCode solutions in Java ☺!
 |★|260|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./algorithms/SingleNumberIII.java)|Bit Manipulation|
 |★☆|261|Medium|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union-Find|
 ||263|Easy|[Ugly Number](https://leetcode.com/problems/ugly-number/)|[Java](./algorithms/UglyNumber.java)|Math|
+||264|Medium|[Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)|[Java](./algorithms/UglyNumberII.java)|Heap, Math|
 ||278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 ||283|Easy|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Java](./algorithms/MoveZeroes.java)|Two Pointers|
 |★|297|Hard|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|Binary Tree, BFS, DFS|
