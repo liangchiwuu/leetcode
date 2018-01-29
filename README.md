@@ -84,5 +84,6 @@ LeetCode solutions in Java ☺!
 |★☆|444|Medium|[Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/)|[Java](./algorithms/SequenceReconstruction.java)|BFS|
 ||560|Medium|[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[Java](./algorithms/SubarraySumEqualsK.java)|Array, Hash|
 ||611|Medium|[Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)|[Java](./algorithms/ValidTriangleNumber.java)|Two Pointers|
+||658|Medium|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|[Java](./algorithms/FindKClosestElements.java)|Binary Search, Heap|
 ||747|Easy|[Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/)|[Java](./algorithms/LargestNumberGreaterThanTwiceOfOthers.java)|Array|
 ||752|Medium|[Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./algorithms/OpenTheLock.java)|BFS|
