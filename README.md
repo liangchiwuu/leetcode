@@ -20,7 +20,7 @@ LeetCode solutions in Java ☺!
 ||23|Hard|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)|[Java](./algorithms/MergeKSortedLists.java)|Divide and Conquer, Heap|
 |★|25|Hard|[Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[Java](./algorithms/ReverseNodesInKGroup.java)|Linked List|
 ||26|Easy|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[Java](./algorithms/RemoveDuplicatesFromSortedArray.java)|Two Pointers|
-||28|Easy|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[Java](./algorithms/ImplementStrStr.java)|String|
+|★|28|Easy|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[Java](./algorithms/ImplementStrStr.java)|String, Hash|
 |★|33|Medium|[Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[Java](./algorithms/SearchInRotatedSortedArray.java)|Binary Search|
 ||34|Medium|[Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[Java](./algorithms/SearchForARange.java)|Binary Search, Divide and Conquer|
 ||35|Easy|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[Java](./algorithms/SearchInsertPosition.java)|Binary Search|

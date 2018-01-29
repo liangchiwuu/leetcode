@@ -66,6 +66,8 @@ public class ImplementStrStr {
 
     /**
      * Sunday algorithm.
+     * 
+     * Time complexity: best Ω(n/m), worst O(m*n)
      */
     class Solution2 {
         public int strStr(String haystack, String needle) {
@@ -106,6 +108,61 @@ public class ImplementStrStr {
                 stepMap.put(needle.charAt(i), needle.length() - i);
             }
             return stepMap;
+        }
+    }
+
+    /**
+     * Rabin–Karp string search algorithm.
+     * 
+     * Time complexity: O(m+n)
+     */
+    class Solution3 {
+        // base could be any big integer
+        private final int BASE = 1_000_000;
+
+        public int strStr(String haystack, String needle) {
+            if (haystack == null || needle == null) {
+                return -1;
+            }
+
+            int m = needle.length();
+            if (m == 0) {
+                return 0;
+            }
+
+            int power = 1;
+            for (int i = 0; i < m; i++) {
+                power = (power * 31) % BASE;
+            }
+
+            int needleHash = 0;
+            for (int i = 0; i < m; i++) {
+                needleHash = (needleHash * 31 + needle.charAt(i)) % BASE;
+            }
+
+            int hashCode = 0;
+            for (int i = 0; i < haystack.length(); i++) {
+                // add next char into hash code
+                hashCode = (hashCode * 31 + haystack.charAt(i)) % BASE;
+                if (i < m - 1) {
+                    continue;
+                }
+
+                // remove first char from hash code
+                if (i >= m) {
+                    hashCode = hashCode - (haystack.charAt(i - m) * power) % BASE;
+                    if (hashCode < 0) {
+                        hashCode += BASE;
+                    }
+                }
+
+                // need to double check if hash code matches
+                if (hashCode == needleHash && haystack.substring(i - m + 1, i + 1).equals(needle)) {
+                    return i - m + 1;
+                }
+            }
+
+            return -1;
         }
     }
 
