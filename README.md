@@ -87,3 +87,4 @@ LeetCode solutions in Java ☺!
 ||658|Medium|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|[Java](./algorithms/FindKClosestElements.java)|Binary Search, Heap|
 ||747|Easy|[Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/)|[Java](./algorithms/LargestNumberGreaterThanTwiceOfOthers.java)|Array|
 ||752|Medium|[Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./algorithms/OpenTheLock.java)|BFS|
+||766|Easy|[Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)|[Java](./algorithms/ToeplitzMatrix.java)|Array|
