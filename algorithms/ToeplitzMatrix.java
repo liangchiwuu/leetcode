@@ -35,7 +35,7 @@ public class ToeplitzMatrix {
 
     /**
      * The ideal is simple. In order to form a Toeplitz matrix, each element in the matrix must equals to its top-left
-     * element (if there is one). So simply loop through each element and check compare the top-left element.
+     * element (if there is one). So simply loop through each element and compare with the top-left ones.
      * 
      * Time complexity: O(m*n)
      */
