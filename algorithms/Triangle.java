@@ -67,9 +67,9 @@ public class Triangle {
 
     /**
      * If we look at solution 1 carefully, we will find that the previous solution actually treat the triangle as a
-     * binary tree, which makes the time complexity to be 2^n (nodes in a binary tree). But since a triangle actually
-     * only have n^2 nodes (lots of nodes are sharing same child & parent), there must be a lot of repetitive
-     * calculations. We can solve this with dynamic programming, which stores the results previously calculated then
+     * binary tree, which makes the time complexity to be 2^n (# of nodes in a binary tree). But since a triangle
+     * actually only have n^2 nodes (lots of nodes are sharing same child & parent), there must be a lot of repetitive
+     * calculations. We can solve this with dynamic programming by storing the results previously calculated and then
      * reuse them later.
      * 
      * Time complexity: O(n^2)
