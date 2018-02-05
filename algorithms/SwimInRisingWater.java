@@ -1,9 +1,7 @@
 package algorithms;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.PriorityQueue;
-import java.util.Set;
 
 /**
  * On an N x N grid, each square grid[i][j] represents the elevation at that point (i,j).
@@ -72,7 +70,7 @@ public class SwimInRisingWater {
             }
 
             int n = grid.length;
-            Set<Integer> seen = new HashSet<>();
+            boolean[][] visited = new boolean[n][n];
             PriorityQueue<Coord> pq = new PriorityQueue<>(new Comparator<Coord>() {
                 @Override
                 public int compare(Coord c1, Coord c2) {
@@ -80,7 +78,7 @@ public class SwimInRisingWater {
                 }
             });
 
-            seen.add(0 * n + 0);
+            visited[0][0] = true;
             pq.add(new Coord(0, 0, grid[0][0]));
 
             while (!pq.isEmpty()) {
@@ -93,8 +91,8 @@ public class SwimInRisingWater {
                 for (int i = 0; i < 4; i++) {
                     int x = c.x + dx[i];
                     int y = c.y + dy[i];
-                    if (x >= 0 && x < n && y >= 0 && y < n && !seen.contains(x * n + y)) {
-                        seen.add(x * n + y);
+                    if (x >= 0 && x < n && y >= 0 && y < n && !visited[x][y]) {
+                        visited[x][y] = true;
                         pq.add(new Coord(x, y, Math.max(grid[x][y], c.cost)));
                     }
                 }
