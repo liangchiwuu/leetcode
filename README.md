@@ -89,3 +89,4 @@ LeetCode solutions in Java ☺!
 ||747|Easy|[Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/)|[Java](./algorithms/LargestNumberGreaterThanTwiceOfOthers.java)|Array|
 ||752|Medium|[Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./algorithms/OpenTheLock.java)|BFS|
 ||766|Easy|[Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)|[Java](./algorithms/ToeplitzMatrix.java)|Array|
+|★☆|776|Medium|[Split BST](https://leetcode.com/problems/split-bst/)|[Java](./algorithms/SplitBST.java)|Binary Tree|
