@@ -30,6 +30,7 @@ LeetCode solutions in Java ☺!
 ||47|Medium|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[Java](./algorithms/PermutationsII.java)|DFS|
 |★|51|Hard|[N-Queens](https://leetcode.com/problems/n-queens/)|[Java](./algorithms/NQueens.java)|DFS|
 |★|53|Easy|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Java](./algorithms/MaximumSubarray.java)|Array|
+||64|Medium|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[Java](./algorithms/MinimumPathSum.java)|Dynamic Programming|
 ||69|Easy|[Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Java](./algorithms/SqrtX.java)|Binary Search|
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|
 |★|75|Medium|[Sort Colors](https://leetcode.com/problems/sort-colors/)|[Java](./algorithms/SortColors.java)|Array, Two Pointers|
