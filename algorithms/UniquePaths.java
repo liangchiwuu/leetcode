@@ -24,7 +24,8 @@ public class UniquePaths {
     }
 
     /**
-     * A dynamic programming solution with top-down structure.
+     * A dynamic programming solution with top-down structure. f[i][j] here stands for # of possible unique paths to
+     * reach (i, j).
      * 
      * Time complexity: O(m*n)
      */
