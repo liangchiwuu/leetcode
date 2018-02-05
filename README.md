@@ -47,6 +47,7 @@ LeetCode solutions in Java ☺!
 ||125|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 |★|126|Hard|[Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[Java](./algorithms/WordLadderII.java)|BFS, DFS|
 ||127|Medium|[Word Ladder](https://leetcode.com/problems/word-ladder/)|[Java](./algorithms/WordLadder.java)|BFS|
+||128|Hard|[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|[Java](./algorithms/LongestConsecutiveSequence.java)|Hash|
 |★|131|Medium|[Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[Java](./algorithms/PalindromePartitioning.java)|DFS|
 ||133|Medium|[Clone Graph](https://leetcode.com/problems/clone-graph/)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
 ||136|Easy|[Single Number](https://leetcode.com/problems/single-number/)|[Java](./algorithms/SingleNumber.java)|Bit Manipulation|
