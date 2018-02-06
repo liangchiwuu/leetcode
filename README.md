@@ -31,6 +31,7 @@ LeetCode solutions in Java ☺!
 |★|51|Hard|[N-Queens](https://leetcode.com/problems/n-queens/)|[Java](./algorithms/NQueens.java)|DFS|
 |★|53|Easy|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Java](./algorithms/MaximumSubarray.java)|Array|
 ||62|Medium|[Unique Paths](https://leetcode.com/problems/unique-paths/)|[Java](./algorithms/UniquePaths.java)|Dynamic Programming|
+||63|Medium|[Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[Java](./algorithms/UniquePathsII.java)|Dynamic Programming|
 ||64|Medium|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[Java](./algorithms/MinimumPathSum.java)|Dynamic Programming|
 ||69|Easy|[Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Java](./algorithms/SqrtX.java)|Binary Search|
 ||70|Easy|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[Java](./algorithms/ClimbingStairs.java)|Dynamic Programming|
