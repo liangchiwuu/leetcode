@@ -30,6 +30,7 @@ LeetCode solutions in Java ☺!
 ||47|Medium|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[Java](./algorithms/PermutationsII.java)|DFS|
 |★|51|Hard|[N-Queens](https://leetcode.com/problems/n-queens/)|[Java](./algorithms/NQueens.java)|DFS|
 |★|53|Easy|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[Java](./algorithms/MaximumSubarray.java)|Array|
+||55|Medium|[Jump Game](https://leetcode.com/problems/jump-game/)|[Java](./algorithms/JumpGame.java)|Dynamic Programming, Greedy|
 ||62|Medium|[Unique Paths](https://leetcode.com/problems/unique-paths/)|[Java](./algorithms/UniquePaths.java)|Dynamic Programming|
 ||63|Medium|[Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[Java](./algorithms/UniquePathsII.java)|Dynamic Programming|
 ||64|Medium|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[Java](./algorithms/MinimumPathSum.java)|Dynamic Programming|
