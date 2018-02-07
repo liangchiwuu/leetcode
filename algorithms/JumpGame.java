@@ -1,15 +1,11 @@
 package algorithms;
 
 /**
- * Given an array of non-negative integers, you are initially positioned at the first index of the array.
- * 
- * Each element in the array represents your maximum jump length at that position.
- * 
- * Determine if you are able to reach the last index.
+ * Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element
+ * in the array represents your maximum jump length at that position. Determine if you are able to reach the last index.
  * 
  * For example:
  * A = [2,3,1,1,4], return true.
- * 
  * A = [3,2,1,0,4], return false.
  */
 public class JumpGame {
@@ -50,9 +46,9 @@ public class JumpGame {
 
     /**
      * A greedy algorithm solution. The idea is simple, let's start from index 0, the farthest we can reach at this
-     * moment is nums[0], note that all indices between origin and farthest is also accessible. Now move to index 1, the
-     * farthest index we can reach now becomes max(farthest, 1 + nums[1]). We can repeat this process until the end of
-     * the array or when i is no longer accessible (i > farthest).
+     * moment is 0 + nums[0] = nums[0], note that all indices between origin and farthest is also accessible. Now move
+     * to index 1, the farthest index we can reach now becomes max(farthest, 1 + nums[1]). We can repeat this process
+     * until the end of the array or when i is no longer accessible (i > farthest).
      * 
      * Time complexity: O(n)
      */
