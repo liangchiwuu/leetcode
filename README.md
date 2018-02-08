@@ -26,6 +26,7 @@ LeetCode solutions in Java ☺!
 ||35|Easy|[Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[Java](./algorithms/SearchInsertPosition.java)|Binary Search|
 ||39|Medium|[Combination Sum](https://leetcode.com/problems/combination-sum/)|[Java](./algorithms/CombinationSum.java)|DFS|
 |★|40|Medium|[Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[Java](./algorithms/CombinationSumII.java)|DFS|
+|★|45|Hard|[Jump Game II](https://leetcode.com/problems/jump-game-ii/)|[Java](./algorithms/JumpGameII.java)|Dynamic Programming, Greedy|
 ||46|Medium|[Permutations](https://leetcode.com/problems/permutations/)|[Java](./algorithms/Permutations.java)|BFS, DFS|
 ||47|Medium|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[Java](./algorithms/PermutationsII.java)|DFS|
 |★|51|Hard|[N-Queens](https://leetcode.com/problems/n-queens/)|[Java](./algorithms/NQueens.java)|DFS|
