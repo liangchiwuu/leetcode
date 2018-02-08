@@ -53,8 +53,8 @@ public class JumpGameII {
     }
 
     /**
-     * A greedy algorithm solution. The code is basically the same as Jump Game, just here we add an additional steps
-     * variable to accumulate # of steps. The idea is that, you must take one additional step to jump pass lastMax.
+     * A greedy algorithm solution. The code is basically the same as Jump Game, just here we add an additional variable
+     * to accumulate # of steps. The idea is that, you must take one more step to jump pass lastMax.
      * 
      * Time complexity: O(n)
      */
