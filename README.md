@@ -85,7 +85,7 @@ LeetCode solutions in Java ☺!
 ||278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 ||283|Easy|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Java](./algorithms/MoveZeroes.java)|Two Pointers|
 |★|297|Hard|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|Binary Tree, BFS, DFS|
-||300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
+|★|300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
 |☆|317|Hard|[Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/)|[Java](./algorithms/ShortestDistanceFromAllBuildings.java)|BFS|
 ||344|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/)|[Java](./algorithms/ReverseString.java)|String|
 ||349|Easy|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)|[Java](./algorithms/IntersectionOfTwoArrays.java)|Array, Binary Search, Two Pointers|
