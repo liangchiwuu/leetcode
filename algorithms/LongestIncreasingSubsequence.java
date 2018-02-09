@@ -61,9 +61,9 @@ public class LongestIncreasingSubsequence {
     /**
      * !! DRAW IT OUT TO SEE THE PROCESS !!
      * 
-     * A dynamic programming solution with binary search. This f array is meant to store the increasing subsequence
-     * formed by including the currently encountered element. Note that f does NOT result in LIS, but will have the same
-     * length.
+     * A dynamic programming solution with binary search. The f array here is used to store the increasing subsequence
+     * formed by all previous elements including the current one. Note that f does NOT result in LIS, but will have the
+     * same length.
      * 
      * Time complexity: O(n log n)
      */
