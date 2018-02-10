@@ -157,7 +157,7 @@ public class Subsets {
 
                 for (int j = 0; j < n; j++) {
                     // check whether the jth digit in i's binary representation is 1
-                    if ((i & (1 << j)) != 0) {
+                    if ((i >> j & 1) == 1) {
                         subset.add(nums[j]);
                     }
                 }
