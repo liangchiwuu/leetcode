@@ -75,6 +75,7 @@ LeetCode solutions in Java ☺!
 ||207|Medium|[Course Schedule](https://leetcode.com/problems/course-schedule/)|[Java](./algorithms/CourseSchedule.java)|BFS|
 ||210|Medium|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./algorithms/CourseScheduleII.java)|BFS|
 ||215|Medium|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[Java](./algorithms/KthLargestElementInAnArray.java)|Array, Divide and Conquer|
+||221|Medium|[Maximal Square](https://leetcode.com/problems/maximal-square/)|[Java](./algorithms/MaximalSquare.java)|Dynamic Programming|
 ||235|Easy|[Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|[Java](./algorithms/LowestCommonAncestorOfABinarySearchTree.java)|Binary Tree|
 |★|236|Medium|[Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[Java](./algorithms/LowestCommonAncestorOfABinaryTree.java)|Binary Tree, Divide and Conquer|
 ||257|Easy|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[Java](./algorithms/BinaryTreePaths.java)|Binary Tree, Divide and Conquer|
