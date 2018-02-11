@@ -101,5 +101,5 @@ LeetCode solutions in Java ☺!
 ||766|Easy|[Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)|[Java](./algorithms/ToeplitzMatrix.java)|Array|
 |★☆|776|Medium|[Split BST](https://leetcode.com/problems/split-bst/)|[Java](./algorithms/SplitBST.java)|Binary Tree|
 ||778|Hard|[Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)|[Java](./algorithms/SwimInRisingWater.java)|Heap|
+||781|Medium|[Rabbits in Forest](https://leetcode.com/problems/rabbits-in-forest/)|[Java](./algorithms/RabbitsInForest.java)|Math|
 ||783|Easy|[Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)|[Java](./algorithms/MinimumDistanceBetweenBSTNodes.java)|Binary Tree|
-
