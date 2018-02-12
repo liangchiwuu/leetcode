@@ -77,51 +77,61 @@ public class LargestRectangleInHistogram {
     /**
      * !!! RECOMMEND TO DRAW IT OUT !!!
      * 
-     * A solution with stack. The idea is to keep pushing the 'index' of the height to the stack and maintain the
-     * 'heights' in the stack in ascending order. This way when an 'index' is popped out from the stack, we can easily
-     * calculate the left/right bound for that index. Let's take a look at the example input [2, 1, 5, 6, 2, 3]:
+     * A solution with stack. The idea is to keep pushing the 'index' of the height into the stack and maintain the
+     * 'heights' in the stack to always in ascending order. This way when an 'index' is popped out from the stack, we
+     * can easily calculate the left/right boundary for the rectangle. Let's try with [2, 1, 5, 6, 2, 3]:
      * 
-     * The first height is 2 at index 0, and since the stack is empty, this height is pushed to the stack.
-     * stack: 0(2)
+     *        6
+     *      5┌─┐
+     *     ┌─┤ │
+     *     │ │ │  3
+     *  2  │ │ │2┌─┐
+     * ┌─┐1│ │ ├─┤ │
+     * │ ├─┤ │ │ │ │
+     * │ │ │ │ │ │ │
+     * └─┴─┴─┴─┴─┴─┘
+     *  0 1 2 3 4 5
      * 
-     * Next, we have height 1, now the top of the stack has a larger height than current, we pop it out.
-     * stack: empty
+     * The first height is 2 at index 0, since the stack is empty, this height is pushed to the stack.
+     * stack -> 0(2)
+     * 
+     * Next, we have height 1 at index 1, now the top of the stack has a larger height than current, we pop it out.
+     * stack -> empty
      * It is at this moment we can calculate the largest rectangle with a max height of 2 at index 0. Since the stack is
-     * now empty, the left bound is 0, and the right bound is of course i - 1 = 0. That gives a rectangle of size 2.
-     * Then, we can push the current height into the stack.
-     * stack: 1(1)
+     * now empty, the left bound is 0, and the right bound is i - 1 = 0 (since i is the first index that has a smaller
+     * height than stack.peek()). That gives a rectangle of size 2. Then, we can push the current height into the stack.
+     * stack -> 1(1)
      * 
-     * Next, since height 5 is larger than top of the stack, we push index 2 into the stack.
-     * stack: 1(1) 2(5)
+     * Next, since height 5 is larger than height[stack.peek()], we push index 2 into the stack.
+     * stack -> 1(1) 2(5)
      * 
      * Next, index 3 is pushed to the stack. Note how the 'heights' in stack is always in ascending order.
-     * stack: 1(1) 2(5) 3(6)
+     * stack -> 1(1) 2(5) 3(6)
      * 
-     * Next, we have height 2 at index 4. Since the 'height' of the top of the stack (6) is larger than 2, we will pop
-     * 3(6) out.
-     * stack: 1(1) 2(5)
-     * Now, what's the possible max rectangle which has a max height of 6 at index 3? The left bound is clearly the
-     * current stack top + 1, and the right bound is i - 1. That gives the formula:
+     * Next, we have height 2 at index 4. Since the height[stack.peek()] is larger than 2, we will pop 3(6) out.
+     * stack -> 1(1) 2(5)
+     * Now, what's the biggest rectangle that has a height 6 at index 3? The left bound should be stack.peek() + 1 since
+     * 2(5) is the last index that has a smaller height than 3(6), and the right bound should be i - 1. This yields to:
      * width = rightBound - leftBound + 1 = (i - 1) - (stack.peek() + 1) + 1 = i - 1 - stack.peek()
-     * So the max area can be calculated: 6 * (4 - 1 - 2) = 6. Since the top of the stack is still larger than current
-     * height (5 > 2), we will pop again.
-     * stack: 1(1)
-     * With the same method, the max area for the rectangle with a max height of 5 at index 2 is 5 * (4 - 1 - 1) = 10.
+     * So the max area can now be calculated as : 6 * (4 - 1 - 2) = 6. Since the top of the stack is still larger than
+     * current height, we will pop again.
+     * stack -> 1(1)
+     * With the same method, the max area for the rectangle (with a max height of 5 at index 2) is 5 * (4 - 1 - 1) = 10.
      * Then finally we can push the current height into the stack.
-     * stack: 1(1) 4(2)
+     * stack -> 1(1) 4(2)
      * 
      * Next, height 3 at index 5 is pushed into the stack.
-     * stack: 1(1) 4(2) 5(3)
+     * stack -> 1(1) 4(2) 5(3)
      * 
      * Now we have reached the end of the height, we can assume that the end is a height of 0, so we will have to pop
      * everything out. First, 5(3) is popped out, max area = 3 * (6 - 1 - 4) = 3 * 1 = 3.
-     * stack: 1(1) 4(2)
+     * stack -> 1(1) 4(2)
      * Next, 4(2) is popped out, max area = 2 * (6 - 1 - 1) = 2 * 4 = 8.
-     * stack: 1(1)
-     * Finally, 1(1) is popped out, max area = 1 * (6 - 1 - )
-     * stack:
+     * stack -> 1(1)
+     * Finally, 1(1) is popped out, stack is empty, max area = 1 * 6
+     * stack -> empty
      * 
-     * Since we've scan through all the heights and the stack is now empty, we can return the possible max area -> 10.
+     * Since we've scan through all the heights and the stack is empty, we can return the possible max area = 10.
      * 
      * Time complexity: O(n)
      */
