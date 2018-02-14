@@ -18,8 +18,9 @@ import java.util.Set;
 public class UglyNumberII {
 
     public static void main(String[] args) {
-        System.out.println(new UglyNumberII().new Solution().nthUglyNumber(10));
-
+        int n = 10;
+        int uglyNumber = new UglyNumberII().new Solution().nthUglyNumber(n);
+        System.out.println(uglyNumber);
     }
 
     /**
