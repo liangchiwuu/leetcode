@@ -85,6 +85,7 @@ LeetCode solutions in Java ☺!
 ||263|Easy|[Ugly Number](https://leetcode.com/problems/ugly-number/)|[Java](./algorithms/UglyNumber.java)|Math|
 ||264|Medium|[Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)|[Java](./algorithms/UglyNumberII.java)|Heap, Math|
 ||278|Easy|[First Bad Version](https://leetcode.com/problems/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
+|★|279|Medium|[Perfect Squares](https://leetcode.com/problems/perfect-squares/)|[Java](./algorithms/PerfectSquares.java)|Dynamic Programming|
 ||283|Easy|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[Java](./algorithms/MoveZeroes.java)|Two Pointers|
 |★|297|Hard|[Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|Binary Tree, BFS, DFS|
 |★|300|Medium|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[Java](./algorithms/LongestIncreasingSubsequence.java)|Dynamic Programming|
