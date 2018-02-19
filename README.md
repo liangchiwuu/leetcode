@@ -108,4 +108,5 @@ LeetCode solutions in Java ☺!
 ||783|Easy|[Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)|[Java](./algorithms/MinimumDistanceBetweenBSTNodes.java)|Binary Tree|
 ||784|Easy|[Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/)|[Java](./algorithms/LetterCasePermutation.java)|DFS|
 ||785|Medium|[Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)|[Java](./algorithms/IsGraphBipartite.java)|BFS, DFS|
+||786|Hard|[K-th Smallest Prime Fraction](https://leetcode.com/problems/k-th-smallest-prime-fraction/)|[Java](./algorithms/KthSmallestPrimeFraction.java)|Heap|
 ||787|Medium|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|[Java](./algorithms/CheapestFlightsWithinKStops.java)|BFS|
