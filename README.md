@@ -107,4 +107,5 @@ LeetCode solutions in Java ☺!
 ||781|Medium|[Rabbits in Forest](https://leetcode.com/problems/rabbits-in-forest/)|[Java](./algorithms/RabbitsInForest.java)|Math|
 ||783|Easy|[Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)|[Java](./algorithms/MinimumDistanceBetweenBSTNodes.java)|Binary Tree|
 ||784|Easy|[Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/)|[Java](./algorithms/LetterCasePermutation.java)|DFS|
+||785|Medium|[Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)|[Java](./algorithms/IsGraphBipartite.java)|BFS, DFS|
 ||787|Medium|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|[Java](./algorithms/CheapestFlightsWithinKStops.java)|BFS|
