@@ -106,3 +106,4 @@ LeetCode solutions in Java ☺!
 ||778|Hard|[Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)|[Java](./algorithms/SwimInRisingWater.java)|Heap|
 ||781|Medium|[Rabbits in Forest](https://leetcode.com/problems/rabbits-in-forest/)|[Java](./algorithms/RabbitsInForest.java)|Math|
 ||783|Easy|[Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)|[Java](./algorithms/MinimumDistanceBetweenBSTNodes.java)|Binary Tree|
+||784|Easy|[Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/)|[Java](./algorithms/LetterCasePermutation.java)|DFS|
