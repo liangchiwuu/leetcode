@@ -20,7 +20,6 @@ import java.util.List;
  * Note:
  * S will be a string with length at most 12.
  * S will consist only of letters or digits.
- * 
  */
 public class LetterCasePermutation {
 
@@ -31,9 +30,10 @@ public class LetterCasePermutation {
     }
 
     /**
-     * A DFS solution. Define DFS function as follow: find all letter case permutations from start index.
+     * A DFS solution. Define DFS function as follow: find all letter case permutations from start index. The key here
+     * is the use of Character class.
      * 
-     * Time complexity: O(n 2^n), since there are 2^n possible answers and O(n) to parse each of them
+     * Time complexity: O(n 2^n), for 2^n possible answers and O(n) to parse each of them
      */
     class Solution {
         public List<String> letterCasePermutation(String s) {
@@ -68,7 +68,7 @@ public class LetterCasePermutation {
      * character is a number, append it to all existing answers; if the character is a letter, copy all current answers
      * and append upper/lower case respectively.
      * 
-     * Time complexity: O(n 2^n), since there are 2^n possible answers and O(n) to parse each of them
+     * Time complexity: O(n 2^n), for 2^n possible answers and O(n) to parse each of them
      */
     class Solution2 {
         public List<String> letterCasePermutation(String s) {
