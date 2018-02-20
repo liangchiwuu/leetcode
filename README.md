@@ -102,6 +102,7 @@ LeetCode solutions in Java ☺!
 |★|712|Medium|[Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)|[Java](./algorithms/MinimumAsciiDeleteSumForTwoStrings.java)|Dynamic Programming|
 ||747|Easy|[Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/)|[Java](./algorithms/LargestNumberGreaterThanTwiceOfOthers.java)|Array|
 ||752|Medium|[Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./algorithms/OpenTheLock.java)|BFS|
+||763|Medium|[Partition Labels](https://leetcode.com/problems/partition-labels/)|[Java](./algorithms/PartitionLabels.java)|Greedy|
 ||766|Easy|[Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)|[Java](./algorithms/ToeplitzMatrix.java)|Array|
 |★☆|776|Medium|[Split BST](https://leetcode.com/problems/split-bst/)|[Java](./algorithms/SplitBST.java)|Binary Tree|
 ||778|Hard|[Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)|[Java](./algorithms/SwimInRisingWater.java)|Heap|
