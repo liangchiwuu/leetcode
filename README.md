@@ -113,4 +113,5 @@ LeetCode solutions in Java ☺!
 ||785|Medium|[Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)|[Java](./algorithms/IsGraphBipartite.java)|BFS, DFS|
 ||786|Hard|[K-th Smallest Prime Fraction](https://leetcode.com/problems/k-th-smallest-prime-fraction/)|[Java](./algorithms/KthSmallestPrimeFraction.java)|Heap|
 ||787|Medium|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|[Java](./algorithms/CheapestFlightsWithinKStops.java)|BFS|
+||788|Easy|[Rotated Digits](https://leetcode.com/problems/rotated-digits/)|[Java](./algorithms/RotatedDigits.java)|Math|
 ||789|Medium|[Escape The Ghosts](https://leetcode.com/problems/escape-the-ghosts/)|[Java](./algorithms/EscapeTheGhosts.java)|Array|
