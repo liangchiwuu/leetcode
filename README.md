@@ -102,7 +102,7 @@ LeetCode solutions in Java ☺!
 ||611|Medium|[Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)|[Java](./algorithms/ValidTriangleNumber.java)|Two Pointers|
 ||658|Medium|[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)|[Java](./algorithms/FindKClosestElements.java)|Binary Search, Heap|
 ||675|Hard|[Cut Off Trees for Golf Event](https://leetcode.com/problems/cut-off-trees-for-golf-event/)|[Java](./algorithms/CutOffTreesForGolfEvent.java)|BFS, Heap|
-|★|678|Medium|[Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/)|[Java](./algorithms/ValidParenthesisString.java)|Dynamic Programming. Greedy|
+|★|678|Medium|[Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/)|[Java](./algorithms/ValidParenthesisString.java)|Dynamic Programming, Greedy|
 ||682|Easy|[Baseball Game](https://leetcode.com/problems/baseball-game/)|[Java](./algorithms/BaseballGame.java)|Stack|
 |★|712|Medium|[Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)|[Java](./algorithms/MinimumAsciiDeleteSumForTwoStrings.java)|Dynamic Programming|
 ||747|Easy|[Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/)|[Java](./algorithms/LargestNumberGreaterThanTwiceOfOthers.java)|Array|

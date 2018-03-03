@@ -65,8 +65,8 @@ public class ValidParenthesisString {
     }
 
     /**
-     * A greedy solution. The idea is to only keep track of the 'balance' of left bracket. For example, string '(()())'
-     * will have a balance of 1, 2, 1, 2, 1, 0 as we parse through the string:
+     * A greedy solution. The idea is to only keep track of the 'balance' of left brackets. For example, string '(()())'
+     * will have a sequence of balances of "1, 2, 1, 2, 1, 0" as we parse through the string:
      * 
      * ( -> 1 (has one extra left bracket)
      * (( -> 2 (has two extra left brackets)
@@ -75,7 +75,7 @@ public class ValidParenthesisString {
      * (()() -> 1
      * (()()) -> 0 (has no left brackets left -> valid)
      * 
-     * Then what about * sign? since a star sign can be either left, right or empty, it will actually expand the
+     * Then what about '*' sign? since a star sign can be either left, right, or empty, it will actually expand the
      * possibilities of the balance. Take '(***)' as example:
      * 
      * ( -> 1
