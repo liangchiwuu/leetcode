@@ -52,6 +52,7 @@ LeetCode solutions in Java ☺!
 ||110|Easy|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[Java](./algorithms/BalancedBinaryTree.java)|Binary Tree, Divide and Conquer|
 |★|114|Medium|[Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[Java](./algorithms/FlattenBinaryTreeToLinkedList.java)|Binary Tree, Divide and Conquer|
 ||120|Medium|[Triangle](https://leetcode.com/problems/triangle/)|[Java](./algorithms/Triangle.java)|Dynamic Programming|
+||121|Easy|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[Java](./algorithms/BestTimeToBuyAndSellStock.java)|Array|
 ||125|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 |★|126|Hard|[Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[Java](./algorithms/WordLadderII.java)|BFS, DFS|
 ||127|Medium|[Word Ladder](https://leetcode.com/problems/word-ladder/)|[Java](./algorithms/WordLadder.java)|BFS|
