@@ -123,3 +123,4 @@ LeetCode solutions in Java ☺!
 ||787|Medium|[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)|[Java](./algorithms/CheapestFlightsWithinKStops.java)|BFS|
 ||788|Easy|[Rotated Digits](https://leetcode.com/problems/rotated-digits/)|[Java](./algorithms/RotatedDigits.java)|Math|
 ||789|Medium|[Escape The Ghosts](https://leetcode.com/problems/escape-the-ghosts/)|[Java](./algorithms/EscapeTheGhosts.java)|Array|
+||793|Hard|[Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/)|[Java](./algorithms/PreimageSizeOfFactorialZeroesFunction.java)|Binary Search, Math|
