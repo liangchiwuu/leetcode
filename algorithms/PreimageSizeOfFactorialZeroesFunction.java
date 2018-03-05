@@ -96,7 +96,6 @@ public class PreimageSizeOfFactorialZeroesFunction {
             }
 
             return 0;
-
         }
 
         private int trailingZeroes(int n) {
