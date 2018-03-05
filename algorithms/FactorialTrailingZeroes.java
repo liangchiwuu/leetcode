@@ -16,10 +16,10 @@ public class FactorialTrailingZeroes {
     /**
      * (Time Limit Exceeded)
      * 
-     * A naive solution. Assume for an integer n, we have the following prime factorization: n! = 2^x * 3^y * 5^z *...
-     * We immediately know that the # of trailing zeros k = min(x, z), and since that x must grater than z in a
-     * factorial, we get the the equation: # of trailing zeros k = # of 5s in n!. With that being said, we can simply
-     * walk through each integer until n and count # of 5s in the factors.
+     * A naive solution. Assume we have the following prime factorization: n! = 2^x * 3^y * 5^z *... We can immediately
+     * tell that the # of trailing zeros k = min(x, z), and since there must be more 2 than 5 in a factorial (x > z), we
+     * get the equation: k (# of trailing zeros) = z (# of 5s in factors of n!). With that being said, we can simply
+     * walk through each integer smaller than n and count # of 5s in factors.
      * 
      * Time complexity: O(n log n)
      */
@@ -44,7 +44,8 @@ public class FactorialTrailingZeroes {
      * So, how can we further optimize the process from previous solution? We can actually represent the # of trailing
      * zeros in n! as: Z = n/5 + n/(5^2) + n/(5^3) + ... Where n/5 stands for the # of integers in 1-n that are
      * divisible by 5, each of these integers can provides one trailing zero. n/(5^2) stands for the # of integers in
-     * 1-n that are divisible by 25, each of these can provides one ADDITIONAL trailing zero.
+     * 1-n that are divisible by 25, each of these can provides "one additional" trailing zero (two in total). And so
+     * on.
      * 
      * Time complexity: O(log n)
      */
