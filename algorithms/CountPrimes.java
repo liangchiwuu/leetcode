@@ -15,7 +15,7 @@ public class CountPrimes {
      * 
      * A brute-force solution. Simply scan through each integer and accumulate valid ones.
      * 
-     * Time complexity: O()
+     * Time complexity: O(n^2)
      */
     class Solution {
         public int countPrimes(int n) {
