@@ -77,6 +77,7 @@ LeetCode solutions in Java ☺!
 ||172|Easy|[Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)|[Java](./algorithms/FactorialTrailingZeroes.java)|Math|
 |★|189|Easy|[Rotate Array](https://leetcode.com/problems/rotate-array/)|[Java](./algorithms/RotateArray.java)|Array|
 ||200|Medium|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|[Java](./algorithms/NumberOfIslands.java)|BFS, DFS, Union-Find|
+||204|Easy|[Count Primes](https://leetcode.com/problems/count-primes/)|[Java](./algorithms/CountPrimes.java)|Math|
 ||206|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[Java](./algorithms/ReverseLinkedList.java)|Linked List|
 ||207|Medium|[Course Schedule](https://leetcode.com/problems/course-schedule/)|[Java](./algorithms/CourseSchedule.java)|BFS|
 ||210|Medium|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./algorithms/CourseScheduleII.java)|BFS|
