@@ -71,6 +71,7 @@ LeetCode solutions in Java ☺!
 ||153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|
 ||154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|
 ||155|Easy|[Min Stack](https://leetcode.com/problems/min-stack/)|[Java](./algorithms/ImplementMinStack.java)|Stack|
+||160|Easy|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[Java](./algorithms/IntersectionOfTwoLinkedLists.java)|Linked List|
 ||162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./algorithms/FindPeakElement.java)|Binary Search|
 ||167|Easy|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
 |☆|170|Easy|[Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Hash|
