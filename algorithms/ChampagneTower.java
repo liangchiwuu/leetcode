@@ -51,7 +51,7 @@ public class ChampagneTower {
      */
     class Solution {
         public double champagneTower(int poured, int queryRow, int queryGlass) {
-            // initialization dp array
+            // initialize dp array
             double[][] dp = new double[queryRow + 1][queryRow + 1];
             dp[0][0] = poured;
 
