@@ -113,6 +113,7 @@ LeetCode solutions in Java ☺!
 |★|678|Medium|[Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/)|[Java](./algorithms/ValidParenthesisString.java)|Dynamic Programming, Greedy|
 ||682|Easy|[Baseball Game](https://leetcode.com/problems/baseball-game/)|[Java](./algorithms/BaseballGame.java)|Stack|
 |★|712|Medium|[Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)|[Java](./algorithms/MinimumAsciiDeleteSumForTwoStrings.java)|Dynamic Programming|
+||724|Easy|[Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[Java](./algorithms/FindPivotIndex.java)|Array|
 ||747|Easy|[Largest Number Greater Than Twice of Others](https://leetcode.com/problems/largest-number-greater-than-twice-of-others/)|[Java](./algorithms/LargestNumberGreaterThanTwiceOfOthers.java)|Array|
 ||752|Medium|[Open the Lock](https://leetcode.com/problems/open-the-lock/)|[Java](./algorithms/OpenTheLock.java)|BFS|
 ||763|Medium|[Partition Labels](https://leetcode.com/problems/partition-labels/)|[Java](./algorithms/PartitionLabels.java)|Greedy|
