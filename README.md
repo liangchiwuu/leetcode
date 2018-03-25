@@ -81,6 +81,7 @@ LeetCode solutions in Java ☺!
 ||204|Easy|[Count Primes](https://leetcode.com/problems/count-primes/)|[Java](./algorithms/CountPrimes.java)|Math|
 ||206|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[Java](./algorithms/ReverseLinkedList.java)|Linked List|
 ||207|Medium|[Course Schedule](https://leetcode.com/problems/course-schedule/)|[Java](./algorithms/CourseSchedule.java)|BFS|
+||209|Medium|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[Java](./algorithms/MinimumSizeSubarraySum.java)|Array|
 ||210|Medium|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)|[Java](./algorithms/CourseScheduleII.java)|BFS|
 ||215|Medium|[Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[Java](./algorithms/KthLargestElementInAnArray.java)|Array, Divide and Conquer|
 ||221|Medium|[Maximal Square](https://leetcode.com/problems/maximal-square/)|[Java](./algorithms/MaximalSquare.java)|Dynamic Programming|
