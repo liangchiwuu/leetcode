@@ -132,3 +132,4 @@ LeetCode solutions in Java ☺!
 ||793|Hard|[Preimage Size of Factorial Zeroes Function](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/)|[Java](./algorithms/PreimageSizeOfFactorialZeroesFunction.java)|Binary Search, Math|
 ||797|Medium|[All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)|[Java](./algorithms/AllPathsFromSourceToTarget.java)|DFS|
 ||799|Medium|[Champagne Tower](https://leetcode.com/problems/champagne-tower/)|[Java](./algorithms/ChampagneTower.java)|Dynamic Programming|
+||804|Easy|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/)|[Java](./algorithms/UniqueMorseCodeWords.java)|Hash|
