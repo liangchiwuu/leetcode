@@ -133,3 +133,4 @@ LeetCode solutions in Java ☺!
 ||797|Medium|[All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)|[Java](./algorithms/AllPathsFromSourceToTarget.java)|DFS|
 ||799|Medium|[Champagne Tower](https://leetcode.com/problems/champagne-tower/)|[Java](./algorithms/ChampagneTower.java)|Dynamic Programming|
 ||804|Easy|[Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/)|[Java](./algorithms/UniqueMorseCodeWords.java)|Hash|
+||806|Easy|[Number of Lines To Write String](https://leetcode.com/problems/number-of-lines-to-write-string/)|[Java](./algorithms/NumberOfLinesToWriteString.java)||
