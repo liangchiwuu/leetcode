@@ -15,6 +15,7 @@ LeetCode solutions in Java ☺!
 |★|1|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
 ||2|Medium|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[Java](./algorithms/AddTwoNumbers.java)|Linked List|
 |★|4|Hard|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|[Java](./algorithms/MedianOfTwoSortedArrays.java)|Array|
+||5|Medium|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[Java](./algorithms/LongestPalindromicSubstring.java)|Dynamic Programming|
 |★|15|Medium|[3Sum](https://leetcode.com/problems/3sum/)|[Java](./algorithms/ThreeSum.java)|Two Pointers|
 ||20|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[Java](./algorithms/ValidParentheses.java)|Stack|
 ||21|Easy|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[Java](./algorithms/MergeTwoSortedLists.java)|Linked List|
