@@ -106,6 +106,7 @@ LeetCode solutions in Java ☺!
 ||350|Easy|[Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[Java](./algorithms/IntersectionOfTwoArraysII.java)|Two Pointers, Hash|
 |★|354|Hard|[Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)|[Java](./algorithms/RussianDollEnvelopes.java)|Dynamic Programming|
 ||368|Medium|[Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/)|[Java](./algorithms/LargestDivisibleSubset.java)|Dynamic Programming|
+||387|Easy|[First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|[Java](./algorithms/FirstUniqueCharacterInAString.java)|Hash|
 ||409|Easy|[Longest Palindrome](https://leetcode.com/problems/longest-palindrome/)|[Java](./algorithms/LongestPalindrome.java)|Hash|
 |★|438|Easy|[Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)|[Java](./algorithms/FindAllAnagramsInAString.java)|Hash|
 |★☆|444|Medium|[Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/)|[Java](./algorithms/SequenceReconstruction.java)|BFS|
