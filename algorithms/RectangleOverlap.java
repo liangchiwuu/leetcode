@@ -16,8 +16,8 @@ package algorithms;
  * Example 2:
  * Input: rec1 = [0,0,1,1], rec2 = [1,0,2,1]
  * Output: false
- * Notes:
  * 
+ * Notes:
  * Both rectangles rec1 and rec2 are lists of 4 integers.
  * All coordinates in rectangles will be between -10^9 and 10^9.
  */
@@ -31,12 +31,12 @@ public class RectangleOverlap {
     }
 
     /**
-     * A solution by calculating the area of overlapping. The four bounds of overlapping can be obtain by:
+     * A solution by calculating the area of overlapping. We can try to obtain the four edges of intersection by:
      * 
-     * Upper bound: min(upper bound of rec1, upper bound of rec2)
-     * Lower bound: max(lower bound of rec1, lower bound of rec2)
-     * Right bound: min(right bound of rec1, right bound of rec2)
-     * Left bound: max(left bound of rec1, left bound of rec2)
+     * Upper edge: min(upper edge of rec1, upper edge of rec2)
+     * Lower edge: max(lower edge of rec1, lower edge of rec2)
+     * Right edge: min(right edge of rec1, right edge of rec2)
+     * Left edge: max(left edge of rec1, left edge of rec2)
      * 
      * Then we know if these two rectangles have overlapping -> area of intersection is positive -> both width and
      * height should be positive.
