@@ -139,3 +139,4 @@ LeetCode solutions in Java ☺!
 ||806|Easy|[Number of Lines To Write String](https://leetcode.com/problems/number-of-lines-to-write-string/)|[Java](./algorithms/NumberOfLinesToWriteString.java)||
 ||807|Medium|[Max Increase to Keep City Skyline](https://leetcode.com/problems/max-increase-to-keep-city-skyline/)|[Java](./algorithms/MaxIncreaseToKeepCitySkyline.java)|Array|
 ||836|Easy|[Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)|[Java](./algorithms/RectangleOverlap.java)|Math|
+||839|Hard|[Similar String Groups](https://leetcode.com/problems/similar-string-groups/)|[Java](./algorithms/SimilarStringGroups.java)|BFS|
