@@ -61,13 +61,13 @@ public class SequenceReconstruction {
             // build graph and calculate indegree
             Map<Integer, Set<Integer>> adjList = new HashMap<>();
             Map<Integer, Integer> indegree = new HashMap<>();
-            int numOfNodes = 0;
+            boolean seqsIsEmpty = true;
             for (int node : org) {
                 adjList.put(node, new HashSet<>());
                 indegree.put(node, 0);
             }
             for (int[] seq : seqs) {
-                numOfNodes += seq.length;
+                seqsIsEmpty = seqsIsEmpty && seq.length == 0;
                 // check if seq contains node not in org
                 for (int node : seq) {
                     if (node > org.length) {
@@ -85,16 +85,21 @@ public class SequenceReconstruction {
                 }
             }
 
-            // case [1], []
-            if (org.length > numOfNodes) {
-                return false;
+            // special case when seqs contains no nodes
+            if (seqsIsEmpty) {
+                return org.length == 0;
             }
 
             // topological sort
             Queue<Integer> queue = new LinkedList<>();
             for (int node : org) {
                 if (indegree.get(node) == 0) {
-                    queue.add(node);
+                    // must start only from origin
+                    if (node == org[0]) {
+                        queue.add(node);
+                    } else {
+                        return false;
+                    }
                 }
             }
             while (!queue.isEmpty()) {
