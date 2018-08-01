@@ -7,7 +7,7 @@ LeetCode solutions in Java ☺!
 
 ## Algorithms
 
-★ indicates critical problems, IMO.  
+★ indicates critical problems in my opinion.  
 ☆ indicates LeetCode subscribers only.
 
 | |#|Difficulty|Problem|Solution|Tag| 
