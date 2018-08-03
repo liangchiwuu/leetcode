@@ -76,6 +76,7 @@ LeetCode solutions in Java ☺!
 ||162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./algorithms/FindPeakElement.java)|Binary Search|
 ||167|Easy|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
 |☆|170|Easy|[Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Hash|
+||171|Easy|[Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)|[Java](./algorithms/ExcelSheetColumnNumber.java)||
 ||172|Easy|[Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)|[Java](./algorithms/FactorialTrailingZeroes.java)|Math|
 |★|189|Easy|[Rotate Array](https://leetcode.com/problems/rotate-array/)|[Java](./algorithms/RotateArray.java)|Array|
 ||200|Medium|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|[Java](./algorithms/NumberOfIslands.java)|BFS, DFS, Union-Find|
