@@ -75,6 +75,7 @@ LeetCode solutions in Java ☺!
 ||160|Easy|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[Java](./algorithms/IntersectionOfTwoLinkedLists.java)|Linked List|
 ||162|Medium|[Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[Java](./algorithms/FindPeakElement.java)|Binary Search|
 ||167|Easy|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
+||168|Easy|[Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)|[Java](./ExcelSheetColumnTitle/Bar.java)|Math|
 |☆|170|Easy|[Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Hash|
 ||171|Easy|[Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)|[Java](./algorithms/ExcelSheetColumnNumber.java)||
 ||172|Easy|[Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)|[Java](./algorithms/FactorialTrailingZeroes.java)|Math|
