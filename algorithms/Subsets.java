@@ -98,11 +98,7 @@ public class Subsets {
                 return results;
             }
 
-            if (nums.length == 0) {
-                results.add(new ArrayList<Integer>());
-                return results;
-            }
-
+            // sort is optional since there are only distinct numbers
             Arrays.sort(nums);
             helper(new ArrayList<Integer>(), nums, 0, results);
 

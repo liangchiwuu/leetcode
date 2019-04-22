@@ -47,10 +47,7 @@ public class SubsetsII {
                 return results;
             }
 
-            if (nums.length == 0) {
-                results.add(new ArrayList<>());
-            }
-
+            // sort is a must since we are making an assumption that identical numbers are grouped together
             Arrays.sort(nums);
             dfs(new ArrayList<>(), nums, 0, results);
 
