@@ -65,11 +65,39 @@ public class ImplementStrStr {
     }
 
     /**
+     * Brute force solution #2.
+     * 
+     * Time complexity: worst case O(m*n)
+     */
+    class Solution2 {
+        public int strStr(String haystack, String needle) {
+            if (haystack == null || needle == null) {
+                return -1;
+            }
+
+            for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
+                boolean matchFound = true;
+                for (int j = 0; j < needle.length(); j++) {
+                    if (haystack.charAt(i + j) != needle.charAt(j)) {
+                        matchFound = false;
+                        break;
+                    }
+                }
+                if (matchFound) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+    }
+
+    /**
      * Sunday algorithm.
      * 
      * Time complexity: best Ω(n/m), worst O(m*n)
      */
-    class Solution2 {
+    class Solution3 {
         public int strStr(String haystack, String needle) {
             if (haystack == null || needle == null) {
                 return -1;
@@ -116,7 +144,7 @@ public class ImplementStrStr {
      * 
      * Time complexity: O(m+n)
      */
-    class Solution3 {
+    class Solution4 {
         // base could be any big integer
         private final int BASE = 1_000_000;
 
