@@ -37,7 +37,7 @@ LeetCode solutions in Java ☺!
 ||62|Medium|[Unique Paths](https://leetcode.com/problems/unique-paths/)|[Java](./algorithms/UniquePaths.java)|Dynamic Programming|✔️||
 ||63|Medium|[Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[Java](./algorithms/UniquePathsII.java)|Dynamic Programming|✔️||
 ||64|Medium|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[Java](./algorithms/MinimumPathSum.java)|Dynamic Programming|✔️||
-||69|Easy|[Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Java](./algorithms/SqrtX.java)|Binary Search|✔️||
+||69|Easy|[Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Java](./algorithms/SqrtX.java)|Binary Search|✔️|✔️|
 ||70|Easy|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[Java](./algorithms/ClimbingStairs.java)|Dynamic Programming|✔️||
 ||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|✔️||
 |★|75|Medium|[Sort Colors](https://leetcode.com/problems/sort-colors/)|[Java](./algorithms/SortColors.java)|Array, Two Pointers|✔️||

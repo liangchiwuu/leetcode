@@ -39,6 +39,7 @@ public class SqrtX {
             long end = x;
             while (start + 1 < end) {
                 long mid = start + (end - start) / 2;
+                // this is why we need long, since int * int is likely to overflow
                 if (mid * mid > x) {
                     end = mid;
                 } else {
