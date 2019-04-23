@@ -32,7 +32,7 @@ public class SearchA2DMatrix {
      */
     class Solution {
         public boolean searchMatrix(int[][] matrix, int target) {
-            if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
                 return false;
             }
 
@@ -71,12 +71,8 @@ public class SearchA2DMatrix {
                     start = mid;
                 }
             }
-
-            if (row[start] == target || row[end] == target) {
-                return true;
-            } else {
-                return false;
-            }
+            
+            return row[start] == target || row[end] == target;
         }
     }
 

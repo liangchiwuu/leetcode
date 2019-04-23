@@ -39,7 +39,7 @@ LeetCode solutions in Java ☺!
 ||64|Medium|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[Java](./algorithms/MinimumPathSum.java)|Dynamic Programming|✔️||
 ||69|Easy|[Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[Java](./algorithms/SqrtX.java)|Binary Search|✔️|✔️|
 ||70|Easy|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[Java](./algorithms/ClimbingStairs.java)|Dynamic Programming|✔️||
-||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|✔️||
+||74|Medium|[Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)|[Java](./algorithms/SearchA2DMatrix.java)|Binary Search|✔️|✔️|
 |★|75|Medium|[Sort Colors](https://leetcode.com/problems/sort-colors/)|[Java](./algorithms/SortColors.java)|Array, Two Pointers|✔️||
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|✔️|✔️|
 ||90|Medium|[Subsets II](https://leetcode.com/problems/subsets-ii/)|[Java](./algorithms/SubsetsII.java)|DFS|✔️|✔️|
