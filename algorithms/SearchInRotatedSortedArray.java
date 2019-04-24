@@ -67,6 +67,57 @@ public class SearchInRotatedSortedArray {
     }
 
     /**
+     * Similar to solution 1 but different way of deciding to go left or right. If nums[mid] > target, there are three
+     * possibilities:
+     * 
+     * 1. mid and target both on upper half -> need to go left
+     * 2. mid and target both on lower half -> need to go left
+     * 3. mid on upper and target on lower -> need to go right
+     * 
+     * Apparently now we just need to find possibility #3, and it happens when nums[mid] > nums[end] >= target. Same
+     * logic applies when nums[mid] < target.
+     * 
+     * Time complexity: O(log n)
+     * Space complexity: O(1)
+     */
+    class Solution2 {
+        public int search(int[] nums, int target) {
+            if (nums == null || nums.length == 0) {
+                return -1;
+            }
+
+            int start = 0;
+            int end = nums.length - 1;
+            while (start + 1 < end) {
+                int mid = start + (end - start) / 2;
+                if (nums[mid] > target) {
+                    if (nums[mid] > nums[end] && nums[end] >= target) {
+                        start = mid;
+                    } else {
+                        end = mid;
+                    }
+                } else if (nums[mid] < target) {
+                    if (target > nums[end] && nums[end] >= nums[mid]) {
+                        end = mid;
+                    } else {
+                        start = mid;
+                    }
+                } else {
+                    return mid;
+                }
+            }
+
+            if (nums[start] == target) {
+                return start;
+            } else if (nums[end] == target) {
+                return end;
+            } else {
+                return -1;
+            }
+        }
+    }
+
+    /**
      * Another approach is to solve this problem through 2 steps. First, find the smallest element in a rotated sorted
      * array. Next, by comparing the target and the smallest element, we can easily tell which side is the target
      * located. What's left is a sorted array and we can simply perform another binary search to find the target.
@@ -75,7 +126,7 @@ public class SearchInRotatedSortedArray {
      * Time complexity: O(log n)
      * Space complexity: O(1)
      */
-    class Solution2 {
+    class Solution3 {
         public int search(int[] nums, int target) {
             // 1. find the smallest element in rotated sorted array
             // 2. search target in a sorted array
