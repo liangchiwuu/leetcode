@@ -43,7 +43,7 @@ LeetCode solutions in Java ☺!
 |★|75|Medium|[Sort Colors](https://leetcode.com/problems/sort-colors/)|[Java](./algorithms/SortColors.java)|Array, Two Pointers|✔️||
 |★|78|Medium|[Subsets](https://leetcode.com/problems/subsets/)|[Java](./algorithms/Subsets.java)|Bit Manipulation, DFS|✔️|✔️|
 ||90|Medium|[Subsets II](https://leetcode.com/problems/subsets-ii/)|[Java](./algorithms/SubsetsII.java)|DFS|✔️|✔️|
-|★|81|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./algorithms/SearchInRotatedSortedArrayII.java)|Binary Search|✔️||
+|★|81|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./algorithms/SearchInRotatedSortedArrayII.java)|Binary Search|✔️|✔️|
 |★|84|Hard|[Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)|[Java](./algorithms/LargestRectangleInHistogram.java)|Array, Stack|✔️||
 ||88|Easy|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[Java](./algorithms/MergeSortedArray.java)|Array|✔️||
 |★|94|Medium|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[Java](./algorithms/BinaryTreeInorderTraversal.java)|Binary Tree, Divide and Conquer|✔️||
