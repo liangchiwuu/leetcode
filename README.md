@@ -69,7 +69,7 @@ LeetCode solutions in Java ☺!
 |★|145|Hard|[Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)|[Java](./algorithms/BinaryTreePostorderTraversal.java)|Binary Tree, Divide and Conquer|✔️||
 |★|146|Hard|[LRU Cache](https://leetcode.com/problems/lru-cache/)|[Java](./algorithms/LRUCache.java)|Hash, Linked List|✔️||
 |★|148|Medium|[Sort List](https://leetcode.com/problems/sort-list/)|[Java](./algorithms/SortList.java)|Divide and Conquer, Linked List|✔️||
-||153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|✔️||
+||153|Medium|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[Java](./algorithms/FindMinimumInRotatedSortedArray.java)|Binary Search|✔️|✔️|
 ||154|Hard|[Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[Java](./algorithms/FindMinimumInRotatedSortedArrayII.java)|Binary Search|✔️||
 ||155|Easy|[Min Stack](https://leetcode.com/problems/min-stack/)|[Java](./algorithms/ImplementMinStack.java)|Stack|✔️||
 ||160|Easy|[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[Java](./algorithms/IntersectionOfTwoLinkedLists.java)|Linked List|✔️||
