@@ -36,6 +36,9 @@ public class FindPeakElement {
 
             while (start + 1 < end) {
                 int mid = start + (end - start) / 2;
+                // note that we do not check if (mid > 0), this is because since we have (start + 1 < end) as the
+                // condition to exit while loop, mid will always between start and end, in other words start = mid = 0
+                // or end = mid = nums.length - 1 can never happen -> mid +-1 will never go out of bound
                 if (nums[mid] > nums[mid - 1]) {
                     // either a uphill or a peak, peak >= mid
                     start = mid;
