@@ -30,48 +30,12 @@ public class BalancedBinaryTree {
     }
 
     /**
-     * A divide and conquer solution. The key here is that, since any sub-tree has to be balanced as well, we can verify
-     * this in the process of getting max depth. Here we use 'depth = -1' to represent that a binary tree is NOT
-     * balanced. So, a binary tree is 'unbalanced' if the left sub-tree is unbalanced OR the right sub-tree is
-     * unbalanced OR the depth difference between left/right sub-tree is greater than 1.
-     * 
-     * This is actually not the vest solution although it's shorter.
-     * 1. the function maxDepth() returns something that is 'not depth'
-     * 2. use -1 to represent unbalanced is kind of tricky
-     * To declare a custom small class is much more readable.
-     * 
-     * Time complexity: O(n)
-     */
-    class Solution {
-        final int UNBALANCED = -1;
-
-        public boolean isBalanced(TreeNode root) {
-            return maxDepth(root) != UNBALANCED;
-        }
-
-        private int maxDepth(TreeNode root) {
-            if (root == null) {
-                return 0;
-            }
-
-            int leftDepth = maxDepth(root.left);
-            int rightDepth = maxDepth(root.right);
-
-            if (leftDepth == UNBALANCED || rightDepth == UNBALANCED || Math.abs(leftDepth - rightDepth) > 1) {
-                return UNBALANCED;
-            }
-
-            return Math.max(leftDepth, rightDepth) + 1;
-        }
-    }
-
-    /**
      * Another approach of divide and conquer. The key is to use a custom 'Result' class to track both the depth and
      * balanced or not of tree.
      * 
      * Time complexity: O(n)
      */
-    class Solution2 {
+    class Solution {
         class Result {
             boolean isBalanced;
             int depth;
@@ -98,6 +62,42 @@ public class BalancedBinaryTree {
             int depth = Math.max(left.depth, right.depth) + 1;
 
             return new Result(isBalanced, depth);
+        }
+    }
+
+    /**
+     * A divide and conquer solution. The key here is that, since any sub-tree has to be balanced as well, we can verify
+     * this in the process of getting max depth. Here we use 'depth = -1' to represent that a binary tree is NOT
+     * balanced. So, a binary tree is 'unbalanced' if the left sub-tree is unbalanced OR the right sub-tree is
+     * unbalanced OR the depth difference between left/right sub-tree is greater than 1.
+     * 
+     * This is actually not the ideal solution although it's shorter.
+     * 1. the function maxDepth() returns something that is 'not depth'
+     * 2. use -1 to represent unbalanced is kind of tricky
+     * To declare a custom small class is much more readable.
+     * 
+     * Time complexity: O(n)
+     */
+    class Solution2 {
+        final int UNBALANCED = -1;
+
+        public boolean isBalanced(TreeNode root) {
+            return maxDepth(root) != UNBALANCED;
+        }
+
+        private int maxDepth(TreeNode root) {
+            if (root == null) {
+                return 0;
+            }
+
+            int leftDepth = maxDepth(root.left);
+            int rightDepth = maxDepth(root.right);
+
+            if (leftDepth == UNBALANCED || rightDepth == UNBALANCED || Math.abs(leftDepth - rightDepth) > 1) {
+                return UNBALANCED;
+            }
+
+            return Math.max(leftDepth, rightDepth) + 1;
         }
     }
 
