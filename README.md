@@ -45,7 +45,7 @@ LeetCode solutions in Java ☺!
 ||90|Medium|[Subsets II](https://leetcode.com/problems/subsets-ii/)|[Java](./algorithms/SubsetsII.java)|DFS|✔️|✔️|
 |★|81|Medium|[Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[Java](./algorithms/SearchInRotatedSortedArrayII.java)|Binary Search|✔️|✔️|
 |★|84|Hard|[Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)|[Java](./algorithms/LargestRectangleInHistogram.java)|Array, Stack|✔️||
-||88|Easy|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[Java](./algorithms/MergeSortedArray.java)|Array|✔️||
+||88|Easy|[Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[Java](./algorithms/MergeSortedArray.java)|Array|✔️|✔️|
 |★|94|Medium|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[Java](./algorithms/BinaryTreeInorderTraversal.java)|Binary Tree, Divide and Conquer|✔️||
 ||98|Medium|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|[Java](./algorithms/ValidateBinarySearchTree.java)|Binary Tree, Divide and Conquer|✔️|✔️|
 ||102|Medium|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)|[Java](./algorithms/BinaryTreeLevelOrderTraversal.java)|Binary Tree, BFS, DFS|✔️||
