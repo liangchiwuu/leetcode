@@ -92,7 +92,7 @@ LeetCode solutions in Java ☺!
 |★|236|Medium|[Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[Java](./algorithms/LowestCommonAncestorOfABinaryTree.java)|Binary Tree, Divide and Conquer|✔️||
 |★|239|Hard|[Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)|[Java](./algorithms/SlidingWindowMaximum.java)|Array, Deque|✔️||
 ||242|Easy|[Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[Java](./algorithms/ValidAnagram.java)|Hash|✔️||
-||257|Easy|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[Java](./algorithms/BinaryTreePaths.java)|Binary Tree, Divide and Conquer|✔️||
+||257|Easy|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[Java](./algorithms/BinaryTreePaths.java)|Binary Tree, Divide and Conquer|✔️|✔️|
 |★|260|Medium|[Single Number III](https://leetcode.com/problems/single-number-iii/)|[Java](./algorithms/SingleNumberIII.java)|Bit Manipulation|✔️||
 |★☆|261|Medium|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union-Find|✔️||
 ||263|Easy|[Ugly Number](https://leetcode.com/problems/ugly-number/)|[Java](./algorithms/UglyNumber.java)|Math|✔️||
