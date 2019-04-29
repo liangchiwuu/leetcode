@@ -76,7 +76,8 @@ public class ValidateBinarySearchTree {
     }
 
     /**
-     * A traversal recursive solution. The logic is very tricky.
+     * A traversal recursive solution. The idea is that the in-order traversal of a BST must be in ascending trend
+     * (equal is okay). Logic is kinda tricky here.
      * 
      * Time complexity: O(n)
      */
@@ -109,8 +110,9 @@ public class ValidateBinarySearchTree {
     }
 
     /*
-     * Another divide and conquer solution. The key here is to use Long instead of Integer in case the initial root.val
-     * is happened to be Integer.MAX_VALUE.
+     * Another divide and conquer solution. Instead of using a 'Result' type to carry max and min, we pass the valid
+     * range of the next node along. Note that we use Long instead of Integer in case the initial root.val is happened
+     * to be Integer.MAX_VALUE.
      * 
      * Time complexity: O(n)
      */
