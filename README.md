@@ -50,7 +50,7 @@ LeetCode solutions in Java ☺!
 ||98|Medium|[Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|[Java](./algorithms/ValidateBinarySearchTree.java)|Binary Tree, Divide and Conquer|✔️||
 ||102|Medium|[Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)|[Java](./algorithms/BinaryTreeLevelOrderTraversal.java)|Binary Tree, BFS, DFS|✔️||
 ||104|Easy|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|[Java](./algorithms/MaximumDepthOfBinaryTree.java)|Binary Tree, Divide and Conquer|✔️||
-||110|Easy|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[Java](./algorithms/BalancedBinaryTree.java)|Binary Tree, Divide and Conquer|✔️||
+||110|Easy|[Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[Java](./algorithms/BalancedBinaryTree.java)|Binary Tree, Divide and Conquer|✔️|✔️|
 |★|114|Medium|[Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)|[Java](./algorithms/FlattenBinaryTreeToLinkedList.java)|Binary Tree, Divide and Conquer|✔️||
 ||120|Medium|[Triangle](https://leetcode.com/problems/triangle/)|[Java](./algorithms/Triangle.java)|Dynamic Programming|✔️||
 ||121|Easy|[Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[Java](./algorithms/BestTimeToBuyAndSellStock.java)|Array|✔️||
