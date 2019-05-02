@@ -30,7 +30,7 @@ public class GraphValidTree {
      * or
      * 
      * 1. G has no simple cycles
-     * 2. G has n01 edges
+     * 2. G has n-1 edges
      * 
      * https://en.wikipedia.org/wiki/Tree_(graph_theory)
      */
