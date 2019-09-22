@@ -124,7 +124,8 @@ public class PopulatingNextRightPointersInEachNode {
     }
 
     /**
-     * A recursive solution. Recursively process the left sub tree and right sub tree.
+     * A recursive solution. Recursively process the left sub tree and right sub tree. Note that this will only work
+     * when the input is a PERFECT BINARY TREE.
      * 
      * Time complexity: O(n)
      * Space complexity: O(1)
